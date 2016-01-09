@@ -1,0 +1,85 @@
+/*------------------------------------*\
+
+		_components.social-icons
+    Created by krisztinavajda on 08/01/16.
+\*------------------------------------*/
+
+.social-icons {
+	max-width: 1200px;
+	min-height: 250px;
+	margin: 40px auto;
+
+	@include media-query(lap-and-up) {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		height: 30vh;
+		margin: 0 auto;
+	}
+}
+
+.social-icon {
+	display: block;
+	margin-top: 40px;
+
+	position: relative;
+	color: $color-links;
+	text-decoration: none;
+	text-align: center;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+.social-icon__icon {
+	$size: 100px;
+	width: $size;
+	height: $size;
+}
+.social-icon__path {
+	fill: $color-links;
+	transition: 300ms ease all;
+
+	.social-icon:hover & {
+		fill: $color-links-attention;
+	}
+}
+
+//Profile variant
+.social-icon__img {
+	.social-icon.profile & {
+		$size: 120px;
+		width: $size;
+		height: $size;
+		border-radius: 200px;
+	}
+}
+
+//Info on social icons
+.social-icon__info {
+	font-size: 14px;
+	text-align: center;
+
+	@include media-query(lap-and-up) {
+		width: 140%;
+		@include position(absolute, 100% -20% null);
+
+
+		//Hover functionality on lap-and-up
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(10px);
+		transition: 300ms ease all;
+
+		.social-icon:hover & {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0px);
+		}
+	}
+}
+.social-icon__info--alpha {
+	font-size: 16px;
+	font-weight: 600;
+}
