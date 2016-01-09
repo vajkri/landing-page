@@ -42,7 +42,7 @@
 		align-items: center;
 
 		height: 100%;
-		padding: $inuit-base-spacing-unit--huge 20px;
+		padding: $inuit-base-spacing-unit;
 
 		@include media-query(lap-and-up) {
 			padding: 0 20px;
@@ -50,8 +50,8 @@
 	}
 
 		.landing__title {
-			margin-bottom: $inuit-base-spacing-unit--large;
-			font-size: 36px;
+			margin-bottom: $inuit-base-spacing-unit;
+			font-size: 34px;
 
 			@include media-query(lap-and-up) {
 				margin-bottom: 10vh;
