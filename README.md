@@ -12,7 +12,7 @@ Project runs on a Node server and uses Gulp to compile scss & js files.
 
   1. Open command line in project folder
   2. `npm install` to install node packages
-  3. `gulp serve` to start server and launch site with browsersync
+  3. `gulp serve` to start server and launch site with browsersync 
 
 
 ## Acknowledgements
