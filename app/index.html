@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="en" ng-app="Portfolio">
   <head>
 
     <meta charset="utf-8">
@@ -29,85 +29,34 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#eb3349">
 
-    <!--&lt;!&ndash; Color the status bar on mobile devices &ndash;&gt;-->
-    <!--<meta name="theme-color" content="#2F3BA2">-->
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <!-- Material Design Lite page styles:
-    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
-    Format: material.color1-color2.min.css, some examples:
-    material.red-teal.min.css
-    material.blue-orange.min.css
-    material.purple-indigo.min.css
-    -->
-
     <!-- Your styles -->
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
 
-    <section class="landing">
-      <div class="landing__content">
-        <h1 class="landing__title">Under development.</h1>
-        <h2 class="landing__subtitle">In the meantime, <br>let's get acquainted:</h2>
-      </div>
-    </section>
-    <section class="social-icons">
-      <!--profile-->
-      <div class="social-icon profile hide-lap-and-up">
-        <img class="social-icon__img" src="images/me2.jpg" alt="">
-        <div class="social-icon__info">
-          <span class="social-icon__info--alpha">Krisztina Vajda, <br></span>
-          <span>Front-end developer</span>
-        </div>
-      </div>
-      <!--mail-->
-      <a class="social-icon" href="mailto:krisztavajda@gmail.com">
-        <svg class="social-icon__icon" xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 0 100 100" width="100" xml:space="preserve" style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"><path class="social-icon__path" d="M19.1 80.9c-17.1-17.1-17.1-44.8 0-61.9 17.1-17.1 44.8-17.1 61.9 0 17.1 17.1 17.1 44.8 0 61.9-17.1 17.1-44.8 17.1-61.9 0zm2.2-2.2c-15.9-15.9-15.9-41.6 0-57.5 15.9-15.9 41.6-15.9 57.5 0 15.9 15.9 15.9 41.6 0 57.5-15.9 15.9-41.6 15.9-57.5 0zm10-16.2c0 0 0 0 0 0l1.8 0c2.8-2.8 5.6-5.6 8.5-8.5 0.6-0.6 1.6-0.6 2.2 0 0.6 0.6 0.6 1.6 0 2.2l-6.3 6.3c-5 0 19.3 0 25 0l-6.2-6.2c-0.6-0.6-0.6-1.6 0-2.2 0.6-0.6 1.6-0.6 2.2 0l8.5 8.5 1.8 0c0 0 0 0 0 0l0-19.3 3.1-3.1 0 22.4c0 1.7-1.4 3.1-3.1 3.1-22.9 0-14.6 0-37.5 0-1.7 0-3.1-1.4-3.1-3.1l0-22.4 3.1 3.1 0 19.3zm-2.8-26.5c0.5-1 1.6-1.7 2.8-1.7l37.5 0c1.2 0 2.2 0.7 2.8 1.7l-2.8 2.8-16.5 16.5c-1.2 1.2-3.2 1.2-4.4 0l-19.3-19.3zm37.1 1.5l-31.3 0 15.6 15.6 15.6-15.6z"/></svg>
-        <div class="social-icon__info">
-          <span>Drop me a line</span>
-        </div>
-      </a>
-      <!--linkedin-->
-      <a class="social-icon" href="https://dk.linkedin.com/in/krisztinavajda" target="_blank">
-        <svg class="social-icon__icon" xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 0 100 100" width="100" xml:space="preserve" style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"><path class="social-icon__path" d="M19.1 80.9c-17.1-17.1-17.1-44.8 0-61.9 17.1-17.1 44.8-17.1 61.9 0 17.1 17.1 17.1 44.8 0 61.9-17.1 17.1-44.8 17.1-61.9 0zm2.2-2.2c-15.9-15.9-15.9-41.6 0-57.5 15.9-15.9 41.6-15.9 57.5 0 15.9 15.9 15.9 41.6 0 57.5-15.9 15.9-41.6 15.9-57.5 0zm17.8-10l0-25-7.8 0 0 25 7.8 0zm-3.9-29.7c2.4 0 3.9-1.7 3.9-3.9 0-2.2-1.5-3.9-3.9-3.9-2.4 0-3.9 1.7-3.9 3.9 0 2.2 1.5 3.9 3.8 3.9l0 0zm8.6 29.7l7.8 0 0-14.1c0-0.8 0.1-1.5 0.3-2.1 0.6-1.5 2.6-3.1 4.8-3.1 2.9 0 4.3 2.3 4.3 5.7l0 13.5 7.8 0 0-14.5c0-7.8-4-11.4-9.2-11.4-4.3 0-6.9 2.5-8 4.3l0.1 0 0-3.4-7.8 0c0.1 2.4 0 25 0 25l0 0z"/></svg>
-        <div class="social-icon__info">
-          <span>Check out my CV</span>
-        </div>
-      </a>
-      <!--profile-->
-      <div class="social-icon profile hide-palm">
-        <img class="social-icon__img" src="images/me2.jpg" alt="">
-        <div class="social-icon__info">
-          <span class="social-icon__info--alpha">Krisztina Vajda, <br></span>
-          <span>Front-end developer</span>
-        </div>
-      </div>
-      <!--twitter-->
-      <a class="social-icon" href="https://twitter.com/vajkri" target="_blank">
-        <svg class="social-icon__icon" xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 0 100 100" width="100" xml:space="preserve" style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"><path class="social-icon__path" d="M19.1 80.9c-17.1-17.1-17.1-44.8 0-61.9 17.1-17.1 44.8-17.1 61.9 0 17.1 17.1 17.1 44.8 0 61.9-17.1 17.1-44.8 17.1-61.9 0zm2.2-2.2c-15.9-15.9-15.9-41.6 0-57.5 15.9-15.9 41.6-15.9 57.5 0 15.9 15.9 15.9 41.6 0 57.5-15.9 15.9-41.6 15.9-57.5 0zm47.5-40.7c-1.4 0.6-2.9 1.1-4.4 1.2 1.6-1 2.8-2.5 3.4-4.4-1.5 0.9-3.1 1.6-4.9 1.9-1.4-1.5-3.4-2.5-5.6-2.5-4.2 0-7.7 3.5-7.7 7.9 0 0.6 0.1 1.2 0.2 1.8-6.4-0.3-12.1-3.5-15.9-8.2-0.7 1.2-1 2.5-1 4 0 2.7 1.4 5.2 3.4 6.6-1.3 0-2.4-0.4-3.5-1 0 0 0 0.1 0 0.1 0 3.8 2.7 7 6.2 7.7-0.6 0.2-1.3 0.3-2 0.3-0.5 0-1 0-1.4-0.1 1 3.1 3.8 5.4 7.2 5.5-2.6 2.1-5.9 3.4-9.6 3.4-0.6 0-1.2 0-1.8-0.1 3.4 2.2 7.4 3.5 11.8 3.5 14.2 0 21.9-12 21.9-22.4 0-0.3 0-0.7 0-1 1.5-1.1 2.8-2.5 3.8-4.1z"/></svg>
-        <div class="social-icon__info">
-          <span>Follow me on Twitter</span>
-        </div>
-      </a>
-      <!--github-->
-      <a class="social-icon" href="https://github.com/vajkri/landing-page" target="_blank">
-        <svg class="social-icon__icon" xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 0 100 100" width="100" xml:space="preserve" style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"><path class="social-icon__path" d="M21.27 78.73c-15.86-15.86-15.86-41.59 0-57.45 15.86-15.86 41.59-15.86 57.45 0 15.87 15.87 15.87 41.59 0 57.45-15.86 15.87-41.59 15.87-57.45 0zm-2.21 2.21c-17.09-17.09-17.09-44.79 0-61.87 17.09-17.09 44.79-17.09 61.87 0 17.09 17.09 17.09 44.79 0 61.87-17.09 17.09-44.79 17.09-61.87 0zm30.94-52.81c-47.68 0 41.67 0 0 0zm0.09 43.75c-0.79-0.01-1.56-0.04-2.33-0.11-1.89-0.19-3.71-0.63-5.42-1.27 0.78-0.12 1.04-0.75 1.04-1.32 0-0.65 0.01-2.48 0-4.78-7.66 1.67-9.25-3.63-9.25-3.63-1.25-3.19-3.06-4.03-3.06-4.03-2.5-1.71 0.19-1.68 0.19-1.68 2.77 0.2 4.22 2.84 4.22 2.84 2.46 4.21 6.45 2.99 8.02 2.29 0.25-1.78 0.97-3 1.75-3.68-6.12-0.7-12.55-3.06-12.55-13.62 0-3.01 1.07-5.47 2.84-7.39-0.28-0.7-1.23-3.5 0.27-7.29 0 0 2.31-0.74 7.58 2.83 2.2-0.61 4.56-0.92 6.9-0.93 2.34 0.01 4.7 0.32 6.9 0.93 5.26-3.57 7.57-2.83 7.57-2.83 1.5 3.8 0.56 6.6 0.27 7.3 1.76 1.93 2.83 4.38 2.83 7.39 0 10.59-6.44 12.92-12.58 13.6 0.99 0.85 1.89 2.51 1.89 5.08 0 3.45 0 6.72 0 7.63 0 0.49 0.19 1.01 0.73 1.23-2.42 0.94-5.05 1.46-7.8 1.47z"/></svg>
-        <div class="social-icon__info">
-          <span>See project on Github</span>
-        </div>
-      </a>
-      <!--Icons by http://besserwerker.com/-->
-    </section>
 
-    <!--<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>-->
+    <!--Main content gets loaded in thorugh ui-view-->
+    <!--View app.js for routing info-->
+    <main ui-view></main>
+
+
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-animate.min.js"></script>
+    <script src="vendors/angular-ui-router.min.js"></script>
+
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+
+    <!-- Modules -->
+    <script src="scripts/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="scripts/controllers/HomeCtrl.js"></script>
+
+    <!--&lt;!&ndash; Directives &ndash;&gt;-->
+
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -117,7 +66,6 @@
 
       ga('create', 'UA-72230601-1', 'auto');
       ga('send', 'pageview');
-
     </script>
   </body>
 </html>
