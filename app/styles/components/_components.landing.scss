@@ -23,8 +23,8 @@
 		z-index: -1;
 
 		$gradientOpacity: 1;
-		$color1: rgba(#EB3349, $gradientOpacity);
-		$color2: rgba(#F45C43, $gradientOpacity);
+		$color1: rgba($gradient-crimson, $gradientOpacity);
+		$color2: rgba($gradient-tomato, $gradientOpacity);
 
 		background: linear-gradient(to top, $color1 , $color2);
 		opacity: 0.9;
