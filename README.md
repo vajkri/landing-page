@@ -1,8 +1,8 @@
-# Landing-page
+# Portfolio
 
 ## Overview
 
-A holding page used until the portfolio site is done.
+Currently a holding page, and later on a portfolio site.
 
 ## Project details
 
