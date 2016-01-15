@@ -1,0 +1,33 @@
+/*------------------------------------*\
+
+		_components.nav-inline
+    Created by krisztinavajda on 15/01/16.
+\*------------------------------------*/
+
+.nav-inline {
+	$spacing: $inuit-base-spacing-unit;
+
+	position: fixed;
+	top: $spacing;
+	left: $spacing;
+	z-index: 10;
+
+	li {
+		display: inline-block;
+		padding-left: 10px;
+		list-style-type: none;
+
+		&.logo {
+			padding-right: 10px;
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+}

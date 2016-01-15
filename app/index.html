@@ -35,6 +35,16 @@
   <body>
 
 
+  <ul class="nav-inline">
+    <li class="logo">
+      <a ui-sref="landing">
+        <span class="logo__tag">vajkri</span>
+      </a>
+    </li>
+    <li><a class="active" ui-sref="landing" ui-sref-active="active">Landing</a></li>
+    <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+  </ul>
+
     <!--Main content gets loaded in thorugh ui-view-->
     <!--View app.js for routing info-->
     <main ui-view></main>
