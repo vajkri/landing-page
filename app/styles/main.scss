@@ -140,6 +140,7 @@
 //@import "bower_components/inuit-page/base.page";
 @import "base/_base.page";
 @import "base/_base.headings";
+@import "base/_base.sections";
 //@import "bower_components/inuit-headings/base.headings";
 //@import "base.type";
 //@import "base.links";
@@ -212,10 +213,12 @@
 @import "components/components.nav-inline";
 @import "components/components.intro";
 @import "components/components.landing";
-@import "components/components.social-icons";
+@import "components/components.about";
 @import "components/components.cards";
 @import "components/components.info-scroll";
 @import "components/components.section-title";
+@import "components/components.social-icons";
+@import "components/components.footer";
 //@import "components.page-head";
 //@import "components.bands";
 //@import "components.promo";
