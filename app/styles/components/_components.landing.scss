@@ -7,7 +7,7 @@
 .landing {
 	position: relative;
 
-	box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.4);
+	box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.4);
 	color: white;
 	text-align: center;
 
@@ -22,11 +22,7 @@
 		@include position(absolute, 0 null null 0);
 		z-index: -1;
 
-		$color1: $gradient-crimson;
-		$color2: $gradient-tomato;
-
-		background: linear-gradient(to top, $color1 , $color2);
-		opacity: 0.9;
+		background: linear-gradient(to top, $gradient-crimson , $gradient-tomato);
 
 		@include media-query(palm) {
 			height: 100%;

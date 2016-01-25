@@ -10,23 +10,16 @@
 
 	overflow: hidden;
 
-	$gradientOpacity: 1;
-	$color1: rgba($gradient-crimson, $gradientOpacity);
-	$color2: rgba($gradient-tomato, $gradientOpacity);
-
-	background: linear-gradient(to top, $color1 , $color2);
+	background: linear-gradient(to top, $gradient-crimson , $gradient-tomato);
 	background-size: cover;
-	background-attachment: fixed;
+	//background-attachment: fixed;
 }
 
 .scroll-wrap {
-	//$gradientOpacity: 0.5;
-
 	height: 100%;
 	min-height: 300vh;
 
 	overflow: auto;
-	//background: linear-gradient(to left, rgba(#FFEEEE, $gradientOpacity) , rgba(#DDEFBB, $gradientOpacity));
 }
 
 .deck {
@@ -34,31 +27,20 @@
 	padding: 20px;
 
 	position: relative;
-	//background: rgba(cyan, 0.3);
-	//outline: 1px solid #777;
 
-	.deck1 {
-		min-height: 300vh;
+	&.deck3 {
+		margin-bottom: 100vh;
 	}
 }
 
-h1 {
+.intro__pinned-h1 {
 	margin: 0;
 	padding: 0;
 
 	font-size: 120px;
 	line-height: 1;
-}
+	color: white;
 
-.centered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.pin--h1-hi,
-.pin--h1-intro {
 	span {
 		position: relative;
 		opacity: 0; //this needs to be there so text doesn't show on initial load, before js loads

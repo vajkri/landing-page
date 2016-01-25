@@ -1,0 +1,96 @@
+/*------------------------------------*\
+
+		_components.cards
+    Created by krisztinavajda on 25/01/16.
+\*------------------------------------*/
+
+.cards {
+	font-size: 0;
+	text-align: center;
+}
+
+.card {
+	display: inline-block;
+	width: 25%;
+	min-width: 300px;
+	height: 300px;
+	margin: auto;
+
+	position: relative;
+
+	background: $color-brand;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	text-align: left;
+
+	@include media-query(portable) {
+		width: 50%;
+	}
+	@include media-query(palm) {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	&:hover {
+		&:before {
+			opacity: 0.4;
+		}
+		&:after {
+			transform: translate3d(0,0,0);
+		}
+		.card__body {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	&:before {
+		content: '';
+		@include position(absolute, 0);
+
+		background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+		opacity: 0.3;
+		transition: opacity 350ms;
+	}
+
+	&:after {
+		content: '';
+		height: calc(50% - 30px);
+
+		@include position(absolute, null $inuit-base-spacing-unit $inuit-base-spacing-unit);
+
+		border: 7px solid white;
+
+		transform: translate3d(0,-90%,0);
+		transition: transform 350ms;
+	}
+}
+
+.card__title {
+	padding: $inuit-base-spacing-unit--large;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	font-size: $inuit-heading-size-2;
+	line-height: 1.2;
+	font-weight: 600;
+	color: white;
+	text-transform: uppercase;
+}
+
+.card__body {
+	padding: $inuit-base-spacing-unit--large $inuit-base-spacing-unit--large $inuit-base-spacing-unit;
+
+	@include position(absolute, null 0 $inuit-base-spacing-unit);
+
+	font-size: 16px;
+	color: white;
+
+	opacity: 0;
+	transform: translate3d(0, -100px, 0);
+	transition: opacity 350ms, transform 350ms;
+}

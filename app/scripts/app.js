@@ -20,6 +20,11 @@ var app = angular.module("Portfolio", ['ui.router'])
         templateUrl:  'views/home.html',
         controller:   'HomeCtrl'
       })
+      .state ('about', {
+        url:          '/about',
+        templateUrl:  'views/about.html',
+        controller:   'AboutCtrl'
+      })
     ;
 
   });

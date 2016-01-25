@@ -6,16 +6,29 @@
 
 app.controller('HomeCtrl', function($scope) {
 
-
-  //test
-
-
-
   // init controller
-  var controller = new ScrollMagic.Controller();
+  var homeScrollController = new ScrollMagic.Controller();
 
-  var tweenHi = new TimelineMax();
-  tweenHi.add([
+
+  // scenes
+  var tweenMouse = TweenMax.to('#anim--mouse-scroll', 0.5, {
+    opacity: 0
+  });
+
+  var sceneMouse = new ScrollMagic.Scene({
+    duration: 300,
+    //offset: 0,
+    triggerElement: ".pin--h1-job"
+  })
+    .setTween(tweenMouse);
+    //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
+    //.setPin("#anim--mouse-scroll")
+
+
+
+
+  var tween1 = new TimelineMax();
+  tween1.add([
     TweenMax.fromTo("#anim--h1-hi", 0.5,
       {
         opacity: 0,
@@ -35,20 +48,18 @@ app.controller('HomeCtrl', function($scope) {
     })
   ]);
 
-// build scene
-  var hiScene = new ScrollMagic.Scene({
-    duration: 500, // the scne should last for a scroll distance of 100px
+  var scene1 = new ScrollMagic.Scene({
+    duration: 500, // the scene should last for a scroll distance of 100px
     offset: 0 // start this scene after scrolling for 50px
   })
-    .setTween(tweenHi) // trigger a TweenMax.to tween
-    //.addIndicators({ name: "1 (duration: 200)" }) // add indicators (requires plugin)
-    .setPin(".pin--h1-hi"); // pins the element for the the scene's duration
+    .setTween(tween1) // trigger a TweenMax.to tween
+    //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
+    .setPin(".pin--h1-hi") // pins the element for the the scene's duration
+    .setClassToggle('body', 'scene-1-active');
 
 
-
-
-  var tweenIntro = new TimelineMax();
-  tweenIntro.add([
+  var tween2 = new TimelineMax();
+  tween2.add([
     TweenMax.from("#anim--h1-intro", 0.5, {
       opacity: 0,
       left: "-30",
@@ -67,24 +78,51 @@ app.controller('HomeCtrl', function($scope) {
     })
   ]);
 
-// build scene
-  var introScene = new ScrollMagic.Scene({
+  var scene2 = new ScrollMagic.Scene({
     triggerElement: ".pin--h1-intro",
-    duration: 500, // the scne should last for a scroll distance of 100px
+    duration: 500
   })
-    .setTween(tweenIntro) // trigger a TweenMax.to tween
-    //.addIndicators({ name: "1 (duration: 200)" }) // add indicators (requires plugin)
-    .setPin(".pin--h1-intro"); // pins the element for the the scene's duration
+    .setTween(tween2)
+    //.addIndicators({ name: "2 (duration: 500)" }) // add indicators (requires plugin)
+    .setPin(".pin--h1-intro");
 
+
+  var tween3 = new TimelineMax();
+  tween3.add([
+    TweenMax.from("#anim--h1-job", 0.5, {
+      opacity: 0,
+      left: "-30",
+      ease: Back.ease
+    }),
+    TweenMax.to("#anim--h1-job", 0.5, {
+      opacity: 1,
+      left: "0",
+      ease: Back.ease
+    }),
+    TweenMax.to("#anim--h1-job", 0.5, {
+      opacity: 0,
+      left: "30",
+      ease: Back.ease,
+      delay: 1
+    })
+  ]);
+
+  var scene3 = new ScrollMagic.Scene({
+    triggerElement: ".pin--h1-job",
+    duration: 500
+  })
+    .setTween(tween3)
+    //.addIndicators({ name: "3 (duration: 500)" }) // add indicators (requires plugin)
+    .setPin(".pin--h1-job");
 
 
 //Add scenes to controller
-  controller.addScene([
-    hiScene,
-    introScene
+  homeScrollController.addScene([
+    sceneMouse,
+    scene1,
+    scene2,
+    scene3
   ]);
-
-
 
 
 });
