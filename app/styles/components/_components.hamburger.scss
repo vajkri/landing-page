@@ -1,0 +1,69 @@
+/*------------------------------------*\
+
+		_hamburger
+    Created by krisztinavajda on 25/01/16.
+\*------------------------------------*/
+
+$color: white;
+
+$height-icon: 26px;
+$width-line: 40px;
+$height-line: 2px;
+
+$transition-time: 350ms;
+$rotation: 45deg;
+$translateY: ($height-icon / 2);
+$translateX: 0;
+
+
+#hamburger-icon {
+	display:block;
+	width:$width-line;
+	height:$height-icon;
+
+	position: absolute;
+	top: $inuit-base-spacing-unit;
+	left: $inuit-base-spacing-unit;
+	z-index: 10;
+
+	.line {
+		display:block;
+		background:$color;
+		width:$width-line;
+		height:$height-line;
+		position:absolute;
+		left:0;
+		transition: all $transition-time;
+
+		&.line-1 {
+			top:0;
+			transform-origin: center center;
+		}
+		&.line-2 {
+			top:50%;
+		}
+		&.line-3 {
+			transform-origin: center center;
+			top:100%;
+		}
+	}
+	&:hover, &:focus {
+		.line-1 {
+			transform: translateY($height-line / 2 * -1);
+		}
+		.line-3 {
+			transform: translateY($height-line / 2);
+		}
+	}
+	&.active {
+		.line-1 {
+			transform: translateY($translateY) translateX($translateX) rotate($rotation);
+		}
+		.line-2 {
+			opacity:0;
+		}
+		.line-3 {
+			transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+		}
+	}
+}
