@@ -18,7 +18,7 @@ app.factory('AboutService', function(){
   service.facts = [
     {
       'title': 'Biking',
-      'desc': 'I love biking. To work, or weekend trips, i love it all.',
+      'desc': 'I defintely (bike) CPH. To work, weekend-, or longer bike trips, i love it all.',
       'img':'images/about/bike2.jpg'
     },
     {
@@ -33,27 +33,27 @@ app.factory('AboutService', function(){
     },
     {
       'title': 'Cooking',
-      'desc': 'I love cooking and food in general. I am also vegan...',
+      'desc': 'I am a passionate hobby chef, and love food in general. I am also vegan, so surprise me with a tasty salad and we\'ll be good friends. :)',
       'img':'images/about/food3.jpg'
     },
     {
       'title': 'Computer games',
-      'desc': 'Computer games are (one of) my weakness(es).',
+      'desc': 'I am slight computer game addict. I guess it comes with the job... ;)',
       'img':'images/about/gaming1.jpg'
     },
     {
       'title': 'Travelling',
-      'desc': 'I love travelling. Be it backpacking in Asia, or a weekend tour in Europe, I say bring it on!',
+      'desc': 'I love travelling. Be it backpacking in Asia, or a weekend tour in Europe, I\'m in!',
       'img':'images/about/travel1.jpg'
     },
     {
       'title': 'Nature',
-      'desc': 'I love getting out, taking walks / runs / hikes in the nature.',
+      'desc': 'Spending time out in the nature is a great way to relax, I find. I love taking walks / runs / hikes in the green.',
       'img':'images/about/nature1.jpg'
     },
     {
       'title': 'Photography',
-      'desc': 'I enjoy taking photos with my good old Canon. I love food (and more recently baby) photography...',
+      'desc': 'I enjoy taking photos with my good old Canon. I especially love food-, and more recently baby photography photography...',
       'img':'images/about/photography1.jpg'
     }
   ];

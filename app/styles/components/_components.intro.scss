@@ -6,20 +6,10 @@
 
 .intro {
 	height: 100%;
+	min-height: 300vh;
 	margin: auto;
 
-	overflow: hidden;
-
 	background: linear-gradient(to top, $gradient-crimson , $gradient-tomato);
-	background-size: cover;
-	//background-attachment: fixed;
-}
-
-.scroll-wrap {
-	height: 100%;
-	min-height: 300vh;
-
-	overflow: auto;
 }
 
 .deck {

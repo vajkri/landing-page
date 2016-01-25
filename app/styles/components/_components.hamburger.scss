@@ -21,7 +21,7 @@ $translateX: 0;
 	width:$width-line;
 	height:$height-icon;
 
-	position: absolute;
+	position: fixed;
 	top: $inuit-base-spacing-unit;
 	left: $inuit-base-spacing-unit;
 	z-index: 10;
