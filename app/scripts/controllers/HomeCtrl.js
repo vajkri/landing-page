@@ -4,21 +4,24 @@
 
 'use strict';
 
-app.controller('HomeCtrl', function($scope) {
+app.controller('HomeCtrl', function(AboutService, $scope) {
 
-  // init controller
+  $scope.facts = AboutService.facts;
+
+
+  // init Scroll Magic controller
   var homeScrollController = new ScrollMagic.Controller();
 
 
   // scenes
-  var tweenMouse = TweenMax.to('#anim--mouse-scroll', 0.5, {
+  var tweenMouse = TweenMax.to('#anim--info-scroll', 0.5, {
     opacity: 0
   });
 
   var sceneMouse = new ScrollMagic.Scene({
     duration: 300,
-    //offset: 0,
-    triggerElement: ".pin--h1-job"
+    offset: 300,
+    triggerElement: "#anim--h1-job"
   })
     .setTween(tweenMouse);
     //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
@@ -116,12 +119,61 @@ app.controller('HomeCtrl', function($scope) {
     .setPin(".pin--h1-job");
 
 
+
+
+
+  var tween4 = TweenMax.to('#anim--intro-transition', 0.5, {
+    backgroundColor: 'white'
+  });
+
+  var scene4 = new ScrollMagic.Scene({
+    duration: 300,
+    offset: 450,
+    triggerElement: "#anim--intro-transition"
+  })
+    //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
+    .setTween(tween4);
+
+
+
+
+
+  //var tween5 = TweenMax.to('.about', 0.5, {
+  //  opacity: 1
+  //});
+
+  var tween5 = new TimelineMax();
+  tween5.add([
+    TweenMax.from(".about", 0.5, {
+      opacity: 0,
+      ease: Back.ease
+    }),
+    TweenMax.to(".about", 0.5, {
+      opacity: 1,
+      ease: Back.ease
+    })
+  ]);
+
+  var scene5 = new ScrollMagic.Scene({
+    //duration: 300,
+    offset: -100,
+    triggerElement: ".about"
+  })
+  //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
+    .setTween(tween5);
+
+
+
+
+
 //Add scenes to controller
   homeScrollController.addScene([
     sceneMouse,
     scene1,
     scene2,
-    scene3
+    scene3,
+    scene4,
+    scene5
   ]);
 
 

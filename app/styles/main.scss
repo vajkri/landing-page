@@ -214,7 +214,8 @@
 @import "components/components.landing";
 @import "components/components.social-icons";
 @import "components/components.cards";
-@import "components/components.mouse-scroll";
+@import "components/components.info-scroll";
+@import "components/components.section-title";
 //@import "components.page-head";
 //@import "components.bands";
 //@import "components.promo";
@@ -252,3 +253,4 @@ $inuit-enable-margins:          true;
 @import "trumps/trumps.spacing";
 @import "trumps/trumps.show-hide";
 @import "trumps/trumps.centering";
+@import "trumps/trumps.transitioner-deck";

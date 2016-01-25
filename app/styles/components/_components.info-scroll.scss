@@ -4,14 +4,17 @@
     Created by krisztinavajda on 25/01/16.
 \*------------------------------------*/
 
-.mouse-scroll {
-	width: 25px;
-	margin: auto;
-
+.info-scroll {
 	position: fixed;
 	bottom: $inuit-base-spacing-unit--large;
 	left: 0;
 	right: 0;
+}
+
+.info-scroll__mouse {
+	display: block;
+	width: 25px;
+	margin: auto;
 
 	opacity: 1;
 	transition: opacity .5s;
@@ -21,7 +24,21 @@
 	}
 	.scroller {
 		fill: $color-gray;
-		animation: updown 2s infinite;
+		animation: updown 1.9s infinite;
+	}
+}
+
+.info-scroll__arrow {
+	display: block;
+	width: 25px;
+	height: 15px;
+	margin: auto;
+	padding-top: 5px;
+
+	animation: updown 1.9s infinite;
+
+	.arrow {
+		fill: $color-gray;
 	}
 }
 
