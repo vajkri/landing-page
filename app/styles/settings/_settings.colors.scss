@@ -28,8 +28,8 @@ $base-text-color:         $color-gray;
 
 
 // Gradient
-$gradient-tomato:         $color-tomato;
-$gradient-crimson:        $color-brand;
+$gradient-tomato:         lighten($color-tomato, 5%);
+$gradient-crimson:        lighten($color-brand, 5%);
 
 
 

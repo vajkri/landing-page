@@ -22,9 +22,8 @@
 		@include position(absolute, 0 null null 0);
 		z-index: -1;
 
-		$gradientOpacity: 1;
-		$color1: rgba($gradient-crimson, $gradientOpacity);
-		$color2: rgba($gradient-tomato, $gradientOpacity);
+		$color1: $gradient-crimson;
+		$color2: $gradient-tomato;
 
 		background: linear-gradient(to top, $color1 , $color2);
 		opacity: 0.9;

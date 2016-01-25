@@ -14,15 +14,12 @@
 
 	li {
 		display: inline-block;
-		padding-left: 10px;
+		margin-left: $inuit-base-spacing-unit;
 		list-style-type: none;
-
-		&.logo {
-			padding-right: 10px;
-		}
+		font-weight: 400;
 
 		&:first-child {
-			padding-left: 0;
+			margin-left: 0;
 		}
 
 		a {
