@@ -7,4 +7,8 @@
 section {
 	max-width: $section-max-width;
 	margin: auto;
+
+	&.full-width {
+		max-width: none;
+	}
 }

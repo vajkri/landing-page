@@ -7,4 +7,8 @@
 footer {
 	max-width: $section-max-width;
 	margin: auto;
+
+	.social-icons {
+		justify-content: space-between;
+	}
 }

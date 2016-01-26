@@ -12,16 +12,28 @@
 	font-size: 80px;
 	font-weight: 100;
 	letter-spacing: 3px;
+	color: $color-gray;
 
 	&:before {
 		content: '';
-		width: 35px;
+		width: 55px;
 		height: 5px;
 
 		position: absolute;
 		bottom: -10px;
 		left: 5px;
 
-		background: $color-gray;
+		background: lighten($color-brand, 20%);
+	}
+
+
+
+	//Variations
+	&.light {
+		color: white;
+
+		&:before {
+			background: white;
+		}
 	}
 }
