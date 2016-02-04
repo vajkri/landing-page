@@ -4,6 +4,8 @@
     Created by krisztinavajda on 25/01/16.
 \*------------------------------------*/
 
+$elemColor: white;
+
 .info-scroll {
 	position: fixed;
 	bottom: $inuit-base-spacing-unit--large;
@@ -20,10 +22,10 @@
 	transition: opacity .5s;
 
 	.stroke {
-		stroke: $color-gray;
+		stroke: $elemColor;
 	}
 	.scroller {
-		fill: $color-gray;
+		fill: $elemColor;
 		animation: updown 1.9s infinite;
 	}
 }
@@ -38,7 +40,7 @@
 	animation: updown 1.9s infinite;
 
 	.arrow {
-		fill: $color-gray;
+		fill: $elemColor;
 	}
 }
 
