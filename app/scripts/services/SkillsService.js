@@ -35,7 +35,7 @@ app.factory('SkillsService', function(){
         },
         {
           'name': 'Grunt / Gulp',
-          'level': '50'
+          'level': '49'
         },
         {
           'name': '.NET',
