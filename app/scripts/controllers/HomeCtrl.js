@@ -32,8 +32,8 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
 
 
 
-  var tween1 = new TimelineMax();
-  tween1.add([
+  var tweenHi = new TimelineMax();
+  tweenHi.add([
     TweenMax.fromTo("#anim--h1-hi", 0.5,
       {
         opacity: 0,
@@ -50,21 +50,24 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
       left: "20",
       ease: Back.ease,
       delay: 1
+    }),
+    TweenMax.to(".intro", 0.5, {
+      backgroundColor: 'red'
     })
   ]);
 
-  var scene1 = new ScrollMagic.Scene({
+  var sceneHi = new ScrollMagic.Scene({
     duration: 500, // the scene should last for a scroll distance of 100px
     offset: 0 // start this scene after scrolling for 50px
   })
-    .setTween(tween1) // trigger a TweenMax.to tween
+    .setTween(tweenHi) // trigger a TweenMax.to tween
     //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-hi") // pins the element for the the scene's duration
     .setClassToggle('body', 'scene-1-active');
 
 
-  var tween2 = new TimelineMax();
-  tween2.add([
+  var tweenName = new TimelineMax();
+  tweenName.add([
     TweenMax.from("#anim--h1-intro", 0.5, {
       opacity: 0,
       left: "-30",
@@ -83,17 +86,17 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     })
   ]);
 
-  var scene2 = new ScrollMagic.Scene({
+  var sceneName = new ScrollMagic.Scene({
     triggerElement: ".pin--h1-intro",
     duration: 500
   })
-    .setTween(tween2)
+    .setTween(tweenName)
     //.addIndicators({ name: "2 (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-intro");
 
 
-  var tween3 = new TimelineMax();
-  tween3.add([
+  var tweenJob = new TimelineMax();
+  tweenJob.add([
     TweenMax.from("#anim--h1-job", 0.5, {
       opacity: 0,
       left: "-30",
@@ -112,11 +115,11 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     })
   ]);
 
-  var scene3 = new ScrollMagic.Scene({
+  var sceneJob = new ScrollMagic.Scene({
     triggerElement: ".pin--h1-job",
     duration: 500
   })
-    .setTween(tween3)
+    .setTween(tweenJob)
     //.addIndicators({ name: "3 (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-job");
 
@@ -124,25 +127,21 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
 
 
 
-  var tween4 = TweenMax.to('#anim--intro-transition', 0.5, {
+  var tweenTransition = TweenMax.to('#anim--intro-transition', 0.5, {
     backgroundColor: 'white'
   });
 
-  var scene4 = new ScrollMagic.Scene({
+  var sceneTransition = new ScrollMagic.Scene({
     duration: 300,
     offset: 450,
     triggerElement: "#anim--intro-transition"
   })
     //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
-    .setTween(tween4);
+    .setTween(tweenTransition);
 
 
 
 
-
-  //var tween5 = TweenMax.to('.about', 0.5, {
-  //  opacity: 1
-  //});
 
   var tween5 = new TimelineMax();
   tween5.add([
@@ -171,10 +170,10 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
 //Add scenes to controller
   homeScrollController.addScene([
     sceneMouse,
-    scene1,
-    scene2,
-    scene3,
-    scene4,
+    sceneHi,
+    sceneName,
+    sceneJob,
+    sceneTransition,
     scene5
   ]);
 
