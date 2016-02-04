@@ -156,3 +156,16 @@
 	background-color: $background-color;
 	color: contrast-color($background-color, $dark, $light);
 }
+
+
+
+
+
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+	@while $i > 0 {
+		&:nth-of-type(#{$i}) {
+			animation-delay: $initial-delay + $stagger-delay * $i;
+		}
+		$i: $i - 1;
+	}
+}

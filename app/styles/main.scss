@@ -141,8 +141,9 @@
 @import "base/_base.page";
 @import "base/_base.headings";
 @import "base/_base.sections";
+@import "base/_base.type";
+@import "base/_base.lists";
 //@import "bower_components/inuit-headings/base.headings";
-//@import "base.type";
 //@import "base.links";
 //@import "bower_components/inuit-lists/base.lists";
 //@import "bower_components/inuit-images/base.images";
@@ -216,6 +217,7 @@
 @import "components/components.about";
 @import "components/components.cards";
 @import "components/components.info-scroll";
+@import "components/components.skills";
 @import "components/components.section-title";
 @import "components/components.social-icons";
 @import "components/components.footer";

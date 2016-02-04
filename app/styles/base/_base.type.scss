@@ -1,0 +1,26 @@
+/*------------------------------------*\
+
+		_base.type
+    Created by krisztinavajda on 02/02/16.
+\*------------------------------------*/
+
+/**
+ * Serif font-family setup
+ */
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+.serif {
+	font-family: 'Libre Baskerville', 'Times New Roman', serif;
+}
+
+
+
+
+
+/**
+ * Emboldened elements.
+ */
+strong {
+	font-weight: 700;
+}

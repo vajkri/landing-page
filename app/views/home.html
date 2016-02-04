@@ -31,22 +31,66 @@
     <h1>photo</h1>
 </section>
 
-<section class="skills">
+<section class="section--skills">
     <h1 class="section-title">Skills</h1>
-    <ul>
-        <li>HTML(5)</li>
-        <li>CSS(3)</li>
-        <li>HTML</li>
-        <li>HTML</li>
-        <li>HTML</li>
-        <li>HTML</li>
-        <li>HTML</li>
-        <li>HTML</li>
-        <li>HTML</li>
-        <li>HTML</li>
-        <li>HTML</li>
-        <li>HTML</li>
-    </ul>
+    <div class="skills">
+        <ul class="lines">
+            <li class="line l--0">
+      <span class="line__label title">
+        Skill level:
+      </span>
+            </li>
+            <li class="line l--25">
+      <span class="line__label">
+        The basics
+      </span>
+            </li>
+            <li class="line l--50">
+      <span class="line__label">
+        Advanced
+      </span>
+            </li>
+            <li class="line l--75">
+      <span class="line__label">
+        Seasoned
+      </span>
+            </li>
+            <li class="line l--100">
+      <span class="line__label">
+        Expert
+      </span>
+            </li>
+        </ul>
+
+        <div class="charts">
+            <div class="chart chart--dev">
+                <span class="chart__title">Development</span>
+                <ul class="chart--horiz">
+                    <li class="chart__bar"
+                        ng-repeat="skill in skills.dev"
+                        ng-style="{'width': skill.level + '%'}"><span class="chart__label">{{skill.name}}</span></li>
+                </ul>
+            </div>
+
+            <div class="chart chart--prod">
+                <span class="chart__title">Productivity</span>
+                <ul class="chart--horiz">
+                    <li class="chart__bar"
+                        ng-repeat="skill in skills.prod"
+                        ng-style="{'width': skill.level + '%'}"><span class="chart__label">{{skill.name}}</span></li>
+                </ul>
+            </div>
+
+            <div class="chart chart--design">
+                <span class="chart__title">Design</span>
+                <ul class="chart--horiz">
+                    <li class="chart__bar"
+                        ng-repeat="skill in skills.design"
+                        ng-style="{'width': skill.level + '%'}"><span class="chart__label">{{skill.name}}</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="about">

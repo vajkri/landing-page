@@ -4,10 +4,12 @@
 
 'use strict';
 
-app.controller('HomeCtrl', function(AboutService, $scope) {
+app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
 
   $scope.facts = AboutService.facts;
+  $scope.skills = SkillsService.skills[0];
 
+  console.log($scope.skills);
 
   // init Scroll Magic controller
   var homeScrollController = new ScrollMagic.Controller();

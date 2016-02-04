@@ -1,0 +1,21 @@
+/*------------------------------------*\
+
+		_base.lists
+    Created by krisztinavajda on 03/02/16.
+\*------------------------------------*/
+
+/**
+ * Remove extra vertical spacing when nesting lists.
+ */
+li {
+
+	> ul,
+	> ol {
+		margin-bottom: 0;
+	}
+
+}
+
+li {
+	list-style-type: none;
+}
