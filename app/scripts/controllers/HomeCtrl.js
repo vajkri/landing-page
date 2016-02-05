@@ -64,7 +64,7 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     offset: 0 // start this scene after scrolling for 50px
   })
     .setTween(tweenHi) // trigger a TweenMax.to tween
-    //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
+    .addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-hi") // pins the element for the the scene's duration
     .setClassToggle('body', 'scene-1-active');
 
@@ -97,7 +97,7 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     duration: 500
   })
     .setTween(tweenName)
-    //.addIndicators({ name: "2 (duration: 500)" }) // add indicators (requires plugin)
+    .addIndicators({ name: "2 (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-intro");
 
   
@@ -129,7 +129,7 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     duration: 500
   })
     .setTween(tweenJob)
-    //.addIndicators({ name: "3 (duration: 500)" }) // add indicators (requires plugin)
+    .addIndicators({ name: "3 (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-job");
 
 

@@ -22,6 +22,7 @@
 }
 
 .intro__pinned-h1 {
+	display: inline-block;
 	margin: 0;
 	padding: 0;
 
@@ -35,11 +36,11 @@
 		display: block;
 		position: relative;
 		opacity: 0; //this needs to be there so text doesn't show on initial load, before js loads
+		backface-visibility: hidden;
 	}
 }
 
 #anim--h1-hi {
-	//transform: translate3d(0, 0, 0);
 	opacity: 1;
 	transform: translate3d(0, 0, 0);
 	animation: arrive-hi 1s 1s ease backwards;
