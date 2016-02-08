@@ -8,6 +8,11 @@ footer {
 	max-width: $section-max-width;
 	margin: auto;
 
+	.section-title {
+		padding-bottom: 0;
+		color: $color-text-dark;
+	}
+
 	.social-icons {
 		justify-content: space-between;
 	}
