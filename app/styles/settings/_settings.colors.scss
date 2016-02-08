@@ -4,8 +4,8 @@
     Created by krisztinavajda on 08/01/16.
 \*------------------------------------*/
 
-$color-brand:       crimson;
-$color-tomato:      tomato;
+$color-brand:       lighten(crimson, 5%);
+$color-tomato:      lighten(tomato, 5%);
 $color-gray:        #282828;
 $color-gray-light:  #999;
 $color-gray-ui:     #ddd;
@@ -28,8 +28,8 @@ $base-text-color:         $color-gray;
 
 
 // Gradient
-$gradient-tomato:         lighten($color-tomato, 5%);
-$gradient-crimson:        lighten($color-brand, 5%);
+$gradient-tomato:         $color-tomato;
+$gradient-crimson:        $color-brand;
 
 
 
@@ -45,6 +45,7 @@ $color-links-carousel:    $color-gray-ui;
 
 
 // Text
+$color-text-dark:       $color-gray;
 $color-code:            $color-green;
 $color-pre-background:  $color-gray;
 $color-pre:             #fff;

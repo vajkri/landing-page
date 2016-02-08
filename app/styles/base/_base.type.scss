@@ -19,6 +19,29 @@
 
 
 /**
+ * Text sizes
+ */
+.text--huge {
+	font-size: 120px;
+	line-height: 1;
+}
+
+
+
+
+
+/**
+ * Text sizes
+ */
+.text--dark {
+	color: $color-text-dark;
+}
+
+
+
+
+
+/**
  * Emboldened elements.
  */
 strong {

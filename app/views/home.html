@@ -7,32 +7,36 @@
 </div>
 
 <section class="intro full-width">
-    <div class="deck deck1">
-        <h1 class="intro__pinned-h1 pin--h1-hi centered">
-            <span id="anim--h1-hi">Hi.</span>
-        </h1>
+    <div class="bg-gradient">
+        <div class="scroll-deck scroll-deck1">
+            <h1 class="intro__pinned-h1 pin--h1-hi text--huge centered">
+                <span id="anim--h1-hi">Hi.</span>
+            </h1>
+        </div>
+        <div class="scroll-deck scroll-deck2">
+            <h1 class="intro__pinned-h1 pin--h1-intro text--huge centered">
+                <span id="anim--h1-intro">My <br>name is <br>Krisztina.</span>
+            </h1>
+        </div>
     </div>
-    <div class="deck deck2">
-        <h1 class="intro__pinned-h1 pin--h1-intro centered">
-            <span id="anim--h1-intro">My <br>name is <br>Krisztina.</span>
-        </h1>
-    </div>
-    <div class="deck deck3">
-        <h1 class="intro__pinned-h1 pin--h1-job centered">
-            <span id="anim--h1-job">I'm a <br>front-end<br>developer.</span>
-        </h1>
-    </div>
-</section>
 
-<section class="transitioner-deck--intro" id="anim--intro-transition"></section>
-
-<section class="me">
-    <h1>This is me.</h1>
-    <h1>photo</h1>
+    <div class="section-transition">
+        <div class="scroll-deck scroll-deck3 js-split">
+            <div class="bg before">
+                <h1 class="split-text text--huge">I'm a front-end developer.</h1>
+            </div>
+            <div class="bg after">
+                <h1 class="split-text text--huge">I'm a front-end developer.</h1>
+            </div>
+        </div>
+        <div class="scroll-deck scroll-deck4">
+            <h1 class="text--huge text--dark centered">Welcome<br />to<br />my<br />page.</h1>
+        </div>
+    </div>
 </section>
 
 <section class="section--skills">
-    <h1 class="section-title">Skills</h1>
+    <h1 class="section-title" data-subtitle="What I can">Skills</h1>
     <div class="skills">
         <ul class="lines">
             <li class="line l--0">
@@ -93,8 +97,8 @@
     </div>
 </section>
 
-<section class="about">
-    <h1 class="section-title">Interests</h1>
+<section class="section--interests about full-width">
+    <h1 class="section-title" data-subtitle="What I like">Interests</h1>
     <div class="cards">
         <div class="card"
              ng-repeat="fact in facts"

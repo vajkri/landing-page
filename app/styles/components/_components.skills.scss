@@ -19,35 +19,37 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+}
 
-	.line {
-		width: 2px;
-		height: inherit;
+.line {
+	width: 2px;
+	height: inherit;
 
-		position: absolute;
+	position: absolute;
 
-		background: rgba($color-gray-ui, 0.5);
+	background: rgba($color-gray-ui, 0.5);
 
-		&.l--0    { left: 0; }
-		&.l--25   { left: 25%; }
-		&.l--50   { left: 50%; }
-		&.l--75   { left: 75%; }
-		&.l--100  { left: calc(100% - 1px); }
+	&.l--0    { left: 0; }
+	&.l--25   { left: 25%; }
+	&.l--50   { left: 50%; }
+	&.l--75   { left: 75%; }
+	&.l--100  { left: calc(100% - 1px); }
+}
 
-		.line__label {
-			display: block;
-			width: 100px;
-			text-align: center;
+.line__label {
+	display: block;
+	width: 100px;
 
-			position: absolute;
-			bottom: -20px;
-			right: -50px;
+	position: absolute;
+	bottom: -20px;
+	right: -50px;
 
-			&.title {
-				text-transform: uppercase;
-				font-weight: bold;
-			}
-		}
+	text-align: center;
+	//color: white;
+	
+	&.title {
+		text-transform: uppercase;
+		font-weight: bold;
 	}
 }
 
@@ -68,7 +70,9 @@
 	display: block;
 	margin: 0 0 10px;
 
+	@include inuit-font-size($inuit-heading-size-4);
 	font-weight: bold;
+	//color: white;
 
 	opacity: 0;
 

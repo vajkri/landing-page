@@ -13,6 +13,14 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
 
 
 
+  //ScrollMagic-related setup
+  var winWidth;
+  $(window).resize(function(){
+    winWidth = window.innerWidth;
+  });
+
+  var splitTextEase = Power3.easeInOut;
+
 
   // init Scroll Magic controller
   var homeScrollController = new ScrollMagic.Controller();
@@ -26,26 +34,16 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
   var sceneMouse = new ScrollMagic.Scene({
     duration: 300,
     offset: 300,
-    triggerElement: "#anim--h1-job"
+    triggerElement: ".scroll-deck3"
   })
     .setTween(tweenMouse);
-    //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
-    //.setPin("#anim--mouse-scroll")
+  //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
+  //.setPin("#anim--mouse-scroll")
 
 
-  //TweenMax.fromTo("#anim--h1-hi", 0.5,
-  //  {
-  //    opacity: 0,
-  //    left: "-20",
-  //    ease: Back.ease
-  //  },
-  //  {
-  //    opacity: 1,
-  //    left: "0",
-  //    ease: Back.ease
-  //  }),
-  
-  
+
+
+
   var tweenHi = new TimelineMax();
   tweenHi.add([
     TweenMax.to("#anim--h1-hi", 0.5, {
@@ -53,10 +51,10 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
       x: 20,
       ease: Back.ease,
       delay: 1
-    }),
-    TweenMax.to(".intro", 0.5, {
-      backgroundColor: 'red'
     })
+    //TweenMax.to(".intro", 0.5, {
+    //  backgroundColor: 'red'
+    //})
   ]);
 
   var sceneHi = new ScrollMagic.Scene({
@@ -64,13 +62,13 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     offset: 0 // start this scene after scrolling for 50px
   })
     .setTween(tweenHi) // trigger a TweenMax.to tween
-    .addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
+    //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-hi") // pins the element for the the scene's duration
     .setClassToggle('body', 'scene-1-active');
 
-  
-  
-  
+
+
+
 
   var tweenName = new TimelineMax();
   tweenName.add([
@@ -97,54 +95,93 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     duration: 500
   })
     .setTween(tweenName)
-    .addIndicators({ name: "2 (duration: 500)" }) // add indicators (requires plugin)
+    //.addIndicators({ name: "2 (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-intro");
 
-  
-  
-  
-  
-  var tweenJob = new TimelineMax();
-  tweenJob.add([
-    TweenMax.from("#anim--h1-job", 0.5, {
+
+
+
+
+  var tweenSplitFrontend = new TimelineMax();
+  tweenSplitFrontend.add([
+    TweenMax.from(".bg.before .split-text, .bg.after .split-text", 0.5, {
       opacity: 0,
       x: -30,
       ease: Back.ease
     }),
-    TweenMax.to("#anim--h1-job", 0.5, {
+    TweenMax.to(".bg.before .split-text, .bg.after .split-text", 0.5, {
       opacity: 1,
       x: 0,
       ease: Back.ease
     }),
-    TweenMax.to("#anim--h1-job", 0.5, {
-      opacity: 0,
-      x: 30,
-      ease: Back.ease,
-      delay: 1
+    TweenMax.fromTo(".scroll-deck3 .bg.before", 0.5,
+      {
+        x: 0,
+        ease: splitTextEase
+      },
+      {
+        xPercent: -100,
+        ease: splitTextEase,
+        delay: 1
+      }),
+    TweenMax.fromTo(".scroll-deck3 .bg.after", 0.5,
+      {
+        xPercent: 0,
+        ease: splitTextEase
+      },
+      {
+        xPercent: 100,
+        ease: splitTextEase,
+        delay: 1
+      })
+  ]);
+
+// build scene
+  var sceneSpiltFrontend = new ScrollMagic.Scene({
+    triggerElement: ".scroll-deck3",
+    triggerHook: 'onLeave',
+    duration: '50%'
+  })
+    .setTween(tweenSplitFrontend)
+    //.addIndicators({ name: "Frontend (duration: 500)" })
+    .setPin(".scroll-deck3");
+
+
+
+
+
+  var tweenBgSkills = new TimelineMax();
+  tweenBgSkills.add([
+    TweenMax.to("main", 0.5, {
+      backgroundColor: "#ff7961"
     })
   ]);
 
-  var sceneJob = new ScrollMagic.Scene({
-    triggerElement: ".pin--h1-job",
-    duration: 500
-  })
-    .setTween(tweenJob)
-    .addIndicators({ name: "3 (duration: 500)" }) // add indicators (requires plugin)
-    .setPin(".pin--h1-job");
-
-
-
-  var tweenTransition = TweenMax.to('#anim--intro-transition', 0.5, {
-    backgroundColor: 'white'
-  });
-
-  var sceneTransition = new ScrollMagic.Scene({
+  var sceneBgSkills = new ScrollMagic.Scene({
     duration: 300,
-    offset: 450,
-    triggerElement: "#anim--intro-transition"
+    triggerElement: ".section--skills"
   })
-    //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
-    .setTween(tweenTransition);
+  //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
+    .setTween(tweenBgSkills);
+
+
+
+
+
+
+  var tweenBgInterests = new TimelineMax();
+  tweenBgInterests.add([
+    TweenMax.to("main", 0.5, {
+      backgroundColor: "#fa625b"
+    })
+  ]);
+
+  var sceneBgInterests = new ScrollMagic.Scene({
+    duration: 300,
+    triggerElement: ".section--interests"
+  })
+  //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
+    .setTween(tweenBgInterests);
 
 
 
@@ -153,12 +190,10 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
   var tweenAbout = new TimelineMax();
   tweenAbout.add([
     TweenMax.from(".about", 0.5, {
-      opacity: 0,
-      ease: Back.ease
+      opacity: 0
     }),
     TweenMax.to(".about", 0.5, {
-      opacity: 1,
-      ease: Back.ease
+      opacity: 1
     })
   ]);
 
@@ -179,8 +214,9 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     sceneMouse,
     sceneHi,
     sceneName,
-    sceneJob,
-    sceneTransition,
+    sceneSpiltFrontend,
+    sceneBgSkills,
+    sceneBgInterests,
     sceneAbout
   ]);
 

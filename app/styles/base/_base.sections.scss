@@ -7,8 +7,10 @@
 section {
 	max-width: $section-max-width;
 	margin: auto;
+	padding: 0 20px;
 
 	&.full-width {
 		max-width: none;
+		padding: 0;
 	}
 }
