@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 .section-title {
-	margin: 80px 0 80px 40px;
+	padding: 80px 0 80px 40px;
 
 	position: relative;
 
@@ -13,11 +13,11 @@
 	color: white;
 
 	&:before {
-		content: 'What I can';
+		content: attr(data-subtitle);
 
 		position: absolute;
-		top: -25px;
-		left: -30px;
+		top: 55px;
+		left: 0px;
 
 		@include inuit-font-size(30px);
 		font-weight: 100;
@@ -26,6 +26,14 @@
 
 
 	//Variations
+	.full-width & {
+		padding: 80px 0 80px 60px;
+
+		&:before {
+			left: 20px;
+		}
+	}
+
 	&.light {
 		color: white;
 
