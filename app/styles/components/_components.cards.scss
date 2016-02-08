@@ -57,11 +57,12 @@
 
 	&:after {
 		content: '';
-		height: calc(50% - 30px);
+		height: calc(50% - 20px);
 
 		@include position(absolute, null $inuit-base-spacing-unit $inuit-base-spacing-unit);
 
-		border: 7px solid white;
+		border: 3px solid white;
+		border-radius: 3px;
 
 		transform: translate3d(0,-90%,0);
 		transition: transform 350ms;
