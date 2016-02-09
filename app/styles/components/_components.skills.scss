@@ -32,6 +32,8 @@
 //	}
 //}
 
+$border-rad: 5px;
+
 .skills {
 	width: 80%;
 	max-width: 960px;
@@ -43,7 +45,7 @@
 	box-shadow: 0 15px 20px 10px rgba(50, 50, 50, 0.2);
 	padding: 30px;
 	background: white;
-	border-radius: 5px;
+	border-radius: $border-rad;
 
 	&:after {
 		content: '';
@@ -145,13 +147,15 @@
 }
 
 .chart__bar {
-	$border-rad: 4px;
 	height: 30px;
 	margin-top: 10px;
 
 	background: linear-gradient(to left, #4CB8C4, #3CD3AD);
 	background: linear-gradient(to left, #614385 , #516395);
-	border-radius: 20px;
+	//border-radius: 20px;
+	border-top-right-radius: $border-rad;
+	border-bottom-right-radius: $border-rad;
+
 	opacity: 0;
 
 	&:first-child {

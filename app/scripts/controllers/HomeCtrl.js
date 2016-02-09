@@ -114,7 +114,7 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
       x: 0,
       ease: Back.ease
     }),
-    TweenMax.fromTo(".scroll-deck3 .bg.before", 0.5,
+    TweenMax.fromTo(".scroll-deck3 .bg.before", 1,
       {
         x: 0,
         ease: splitTextEase
@@ -122,9 +122,9 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
       {
         xPercent: -100,
         ease: splitTextEase,
-        delay: 1
+        delay: 0.5
       }),
-    TweenMax.fromTo(".scroll-deck3 .bg.after", 0.5,
+    TweenMax.fromTo(".scroll-deck3 .bg.after", 1,
       {
         xPercent: 0,
         ease: splitTextEase
@@ -132,7 +132,7 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
       {
         xPercent: 100,
         ease: splitTextEase,
-        delay: 1
+        delay: 0.5
       })
   ]);
 
@@ -140,7 +140,8 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
   var sceneSpiltFrontend = new ScrollMagic.Scene({
     triggerElement: ".scroll-deck3",
     triggerHook: 'onLeave',
-    duration: '50%'
+    duration: '150%'
+    //duration: '50%'
   })
     .setTween(tweenSplitFrontend)
     //.addIndicators({ name: "Frontend (duration: 500)" })
@@ -158,7 +159,7 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
   ]);
 
   var sceneBgSkills = new ScrollMagic.Scene({
-    duration: 300,
+    duration: 500,
     triggerElement: ".section--skills"
   })
   //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
@@ -172,12 +173,12 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
   var tweenBgInterests = new TimelineMax();
   tweenBgInterests.add([
     TweenMax.to("main", 0.5, {
-      backgroundColor: "#fa625b"
+      backgroundColor: "#eb1f48"
     })
   ]);
 
   var sceneBgInterests = new ScrollMagic.Scene({
-    duration: 300,
+    duration: 500,
     triggerElement: ".section--interests"
   })
   //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
