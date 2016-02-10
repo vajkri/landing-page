@@ -68,8 +68,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
   })
     .setTween(tweenHi) // trigger a TweenMax.to tween
     //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
-    .setPin(".pin--h1-hi") // pins the element for the the scene's duration
-    .setClassToggle('body', 'scene-1-active');
+    .setPin(".pin--h1-hi"); // pins the element for the the scene's duration
 
 
 
@@ -165,11 +164,32 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
 
   var sceneBgSkills = new ScrollMagic.Scene({
     duration: 500,
+    //triggerHook: 'onEnter',
     triggerElement: ".section--skills"
   })
   //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
     .setTween(tweenBgSkills);
 
+
+  // Return the visible amount of px
+  // of any element currently in viewport.
+  (function($, win) {
+    $.fn.inViewport = function(cb) {
+      return this.each(function(i,el){
+        function visPx(){
+          var H = $(this).height(),
+            r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+          return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));
+        } visPx();
+        $(win).on("resize scroll", visPx);
+      });
+    };
+  }(jQuery, window));
+
+  // Run animation of skills only once, when it gets in view
+  $(".section--skills").inViewport(function(px){
+    if(px) $('body').addClass('skills--is-active') ;
+  });
 
 
 
@@ -212,8 +232,8 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
 
 
 
-  var tweenAbout = new TimelineMax();
-  tweenAbout.add([
+  var tweenInterests = new TimelineMax();
+  tweenInterests.add([
     TweenMax.from(".section--interests", 0.5, {
       opacity: 0
     }),
@@ -222,13 +242,13 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     })
   ]);
 
-  var sceneAbout = new ScrollMagic.Scene({
+  var sceneInterests = new ScrollMagic.Scene({
     //duration: 300,
     offset: -100,
     triggerElement: ".section--interests"
   })
   //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
-    .setTween(tweenAbout);
+    .setTween(tweenInterests);
 
 
 
@@ -243,7 +263,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     sceneBgSkills,
     sceneBgInterests,
     sceneBgFooter,
-    sceneAbout
+  sceneInterests
   ]);
 
 
