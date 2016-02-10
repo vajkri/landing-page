@@ -4,7 +4,7 @@
     Created by krisztinavajda on 15/01/16.
 \*------------------------------------*/
 
-.nav-inline {
+.nav-block {
 	$spacing: $inuit-base-spacing-unit;
 
 	position: fixed;
@@ -13,8 +13,7 @@
 	z-index: 10;
 
 	li {
-		display: inline-block;
-		margin-left: $inuit-base-spacing-unit;
+		margin-top: $inuit-base-spacing-unit;
 		list-style-type: none;
 		font-weight: 400;
 

@@ -34,25 +34,22 @@
   <body>
 
 
-  <a ng-init="navActive = false" ng-click="navActive = !navActive" ng-class="{'active' : navActive}" id="hamburger-icon" href="" title="Menu">
-    <span class="line line-1"></span>
-    <span class="line line-2"></span>
-    <span class="line line-3"></span>
-  </a>
+  <!--<a ng-init="navActive = false" ng-click="navActive = !navActive" ng-class="{'active' : navActive}" id="hamburger-icon" href="" title="Menu">-->
+    <!--<span class="line line-1"></span>-->
+    <!--<span class="line line-2"></span>-->
+    <!--<span class="line line-3"></span>-->
+  <!--</a>-->
 
-  <!--<ul class="nav-inline">-->
-    <!--<li class="logo">-->
-      <!--<a ui-sref="landing">-->
-        <!--<span class="logo__name">Krisztina Vajda</span>-->
-        <!--<span class="logo__job">Front-end developer</span>-->
-      <!--</a>-->
-    <!--</li>-->
-    <!--<li><a class="active" ui-sref="landing" ui-sref-active="active">Landing</a></li>-->
-    <!--<li><a ui-sref="home" ui-sref-active="active">Home</a></li>-->
-    <!--<li><a ui-sref="about" ui-sref-active="active">Fun facts about Kriszta</a></li>-->
-  <!--</ul>-->
+  <ul class="nav-block">
+    <li class="brand">
+        <span class="brand__name">Krisztina Vajda</span>
+    </li>
+    <li><a class="active" href="#/#navIntro">Intro</a></li>
+    <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+    <li><a ui-sref="about" ui-sref-active="active">Fun facts about Kriszta</a></li>
+  </ul>
 
-  <!--Main content gets loaded in thorugh ui-view-->
+  <!--Main content gets loaded in through ui-view-->
   <!--View app.js for routing info-->
   <main ui-view ng-cloak></main>
 
