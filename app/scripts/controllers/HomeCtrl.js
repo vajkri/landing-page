@@ -18,6 +18,18 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
   });
 
 
+  //Scroll indicator
+  //capture scroll percentage
+  $(window).scroll(function(){
+    var wintop = $(window).scrollTop(), docheight =
+
+      $(document).height(), winheight = $(window).height();
+    var scrolled = (wintop/(docheight-winheight))*100;
+
+    $('.scroll-indicator').css('width', (scrolled + '%'));
+  });
+
+
   //ScrollMagic-related setup
   var winWidth;
   $(window).resize(function(){

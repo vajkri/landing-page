@@ -1,0 +1,15 @@
+/*------------------------------------*\
+
+		_scroll-indicator
+    Created by krisztinavajda on 10/02/16.
+\*------------------------------------*/
+
+.scroll-indicator {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 90;
+	height: 5px;
+	background: $color-gray;
+	width: 0;
+}
