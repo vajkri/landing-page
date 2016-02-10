@@ -4,13 +4,18 @@
 
 'use strict';
 
-app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
+app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsService) {
 
   // Data
   $scope.facts = AboutService.facts;
   $scope.skills = SkillsService.skills[0];
 
-
+  $scope.contentLoaded = false;
+  $scope.$on('$viewContentLoaded', function(event) {
+    $timeout(function() {
+      $scope.contentLoaded = true;
+    },0);
+  });
 
 
   //ScrollMagic-related setup
@@ -188,12 +193,31 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
 
 
 
+  var tweenBgFooter = new TimelineMax();
+  tweenBgFooter.add([
+    TweenMax.to("main", 0.5, {
+      backgroundColor: "#fff"
+    })
+  ]);
+
+  var sceneBgFooter = new ScrollMagic.Scene({
+    duration: 500,
+    triggerHook: 'onEnter',
+    triggerElement: ".section--footer"
+  })
+  //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
+    .setTween(tweenBgFooter);
+
+
+
+
+
   var tweenAbout = new TimelineMax();
   tweenAbout.add([
-    TweenMax.from(".about", 0.5, {
+    TweenMax.from(".section--interests", 0.5, {
       opacity: 0
     }),
-    TweenMax.to(".about", 0.5, {
+    TweenMax.to(".section--interests", 0.5, {
       opacity: 1
     })
   ]);
@@ -201,7 +225,7 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
   var sceneAbout = new ScrollMagic.Scene({
     //duration: 300,
     offset: -100,
-    triggerElement: ".about"
+    triggerElement: ".section--interests"
   })
   //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
     .setTween(tweenAbout);
@@ -218,6 +242,7 @@ app.controller('HomeCtrl', function($scope, AboutService, SkillsService) {
     sceneSpiltFrontend,
     sceneBgSkills,
     sceneBgInterests,
+    sceneBgFooter,
     sceneAbout
   ]);
 
