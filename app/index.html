@@ -44,9 +44,10 @@
     <li class="brand">
         <span class="brand__name">Krisztina Vajda</span>
     </li>
-    <li><a class="active" href="#/#navIntro">Intro</a></li>
-    <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
-    <li><a ui-sref="about" ui-sref-active="active">Fun facts about Kriszta</a></li>
+    <li><a class="active" href="#navIntro" du-smooth-scroll duration="1000">Intro</a></li>
+    <li><a href="#navSkills" du-smooth-scroll duration="1000">Skills</a></li>
+    <li><a href="#navInterests" du-smooth-scroll duration="1000">Interests</a></li>
+    <li><a href="#navFooter" du-smooth-scroll duration="1000">Contact</a></li>
   </ul>
 
   <!--Main content gets loaded in through ui-view-->
@@ -56,6 +57,7 @@
 
 
     <script src="scripts/vendors/angular.min.js"></script>
+    <script src="scripts/vendors/angular-scroll.min.js"></script>
     <script src="scripts/vendors/angular-animate.min.js"></script>
     <script src="scripts/vendors/angular-ui-router.min.js"></script>
 
@@ -79,7 +81,6 @@
 
     <!-- Controllers -->
     <script src="scripts/controllers/HomeCtrl.js"></script>
-    <script src="scripts/controllers/AboutCtrl.js"></script>
 
     <!--&lt;!&ndash; Directives &ndash;&gt;-->
 

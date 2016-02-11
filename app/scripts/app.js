@@ -4,7 +4,7 @@
 
 'use strict';
 
-var app = angular.module("Portfolio", ['ui.router'])
+var app = angular.module("Portfolio", ['ui.router', 'duScroll'])
   .config(function($stateProvider, $urlRouterProvider) {
 
     // For any unmatched url, redirect to 'home'
@@ -12,18 +12,13 @@ var app = angular.module("Portfolio", ['ui.router'])
 
     $stateProvider
       .state ('landing', {
-        url:          '/',
+        url:          '/landing',
         templateUrl:  'views/landing.html'
       })
       .state ('home', {
-        url:          '/home',
+        url:          '/',
         templateUrl:  'views/home.html',
         controller:   'HomeCtrl'
-      })
-      .state ('about', {
-        url:          '/about',
-        templateUrl:  'views/about.html',
-        controller:   'AboutCtrl'
       })
     ;
 
