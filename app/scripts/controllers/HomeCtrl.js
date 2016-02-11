@@ -39,7 +39,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
   var sceneMouse = new ScrollMagic.Scene({
     duration: 300,
     offset: 300,
-    triggerElement: ".scroll-deck3"
+    triggerElement: ".scroll-deck4"
   })
     .setTween(tweenMouse);
   //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
@@ -163,7 +163,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
   ]);
 
   var sceneBgSkills = new ScrollMagic.Scene({
-    duration: 500,
+    //duration: 500,
     //triggerHook: 'onEnter',
     triggerElement: ".section--skills"
   })
@@ -203,7 +203,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
   ]);
 
   var sceneBgInterests = new ScrollMagic.Scene({
-    duration: 500,
+    //duration: 500,
     triggerElement: ".section--interests"
   })
   //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
@@ -221,7 +221,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
   ]);
 
   var sceneBgFooter = new ScrollMagic.Scene({
-    duration: 500,
+    //duration: 500,
     triggerHook: 'onEnter',
     triggerElement: ".section--footer"
   })
