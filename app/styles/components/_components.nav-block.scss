@@ -4,26 +4,55 @@
     Created by krisztinavajda on 15/01/16.
 \*------------------------------------*/
 
-.nav-block {
-	$spacing: $inuit-base-spacing-unit;
+$spacing: $inuit-base-spacing-unit;
+
+.brand {
+	margin-top: 0;
 
 	position: fixed;
 	top: $spacing;
 	left: $spacing;
-	z-index: 10;
+	z-index: 90;
 
-	li {
-		margin-top: $inuit-base-spacing-unit;
-		list-style-type: none;
-		font-weight: 400;
+	@include inuit-font-size(18px);
+	font-weight: 700;
+	letter-spacing: 0.05rem;
+	text-transform: uppercase;
+	color: white;
 
-		&:first-child {
-			margin-left: 0;
-		}
+	opacity: 1;
+	cursor: pointer;
+}
 
-		a {
-			color: white;
-			text-decoration: none;
-		}
+.nav-block {
+	position: fixed;
+	top: $spacing*2;
+	left: $spacing;
+	z-index: 90;
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+.nav-block__item {
+	margin-top: $inuit-base-spacing-unit;
+
+	list-style-type: none;
+	font-weight: 400;
+
+	opacity: 0;
+	transform: translate3d(-10px, 0, 0);
+	transition: 350ms ease;
+	@include stagger-delay(4, 0s, 0.07s, transition);
+
+	.active & {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+
+	&:hover {
+		transform: translate3d(5px, 0, 0);
+		transition-delay: 0s;
 	}
 }

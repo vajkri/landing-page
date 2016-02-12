@@ -161,10 +161,10 @@
 
 
 
-@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+@mixin stagger-delay($i, $initial-delay, $stagger-delay, $type: animation) {
 	@while $i > 0 {
 		&:nth-of-type(#{$i}) {
-			animation-delay: $initial-delay + $stagger-delay * $i;
+			#{$type}-delay: $initial-delay + $stagger-delay * $i;
 		}
 		$i: $i - 1;
 	}
