@@ -7,9 +7,6 @@
 /**
  * Serif font-family setup
  */
-@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-
 .serif {
 	font-family: 'Libre Baskerville', 'Times New Roman', serif;
 }
@@ -38,7 +35,7 @@
 
 
 /**
- * Text sizes
+ * Text colors
  */
 .text--dark {
 	color: $color-text-dark;
