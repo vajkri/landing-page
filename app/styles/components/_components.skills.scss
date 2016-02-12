@@ -54,7 +54,7 @@ $border-rad: 5px;
   @include media-query(palm) {
     top: 0;
     bottom: auto;
-    font-size: 13px;
+    @include inuit-font-size(14px);
   }
 
 	&.l--25   { left: 0; }
@@ -173,7 +173,8 @@ $border-rad: 5px;
 
   @include media-query(palm) {
     margin-left: 4px;
-    font-size: 14px;
+
+    @include inuit-font-size(14px);
     line-height: 25px;
   }
 }

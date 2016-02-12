@@ -12,6 +12,10 @@ $elemColor: white;
 	left: 0;
 	right: 0;
 	z-index: 20;
+
+  @include media-query(palm) {
+    bottom: $inuit-base-spacing-unit;
+  }
 }
 
 .info-scroll__mouse {
