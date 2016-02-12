@@ -4,6 +4,10 @@
     Created by krisztinavajda on 02/02/16.
 \*------------------------------------*/
 
+.section--skills {
+  padding-bottom: 30vh;
+}
+
 $border-rad: 5px;
 
 .skills {
@@ -27,7 +31,7 @@ $border-rad: 5px;
 .chart__legend {
 	display: block;
 	width: 25%;
-	padding: 0px 4px 4px 0;
+	padding: 0 4px 4px 0;
 
 	position: absolute;
 	bottom: 0;
