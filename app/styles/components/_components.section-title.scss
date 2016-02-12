@@ -12,6 +12,11 @@
 	@include inuit-font-size(90px);
 	color: white;
 
+  @include media-query(palm) {
+    padding: 40px 0 40px 20px;
+    @include inuit-font-size(40px);
+  }
+
 	&:before {
 		content: attr(data-subtitle);
 
@@ -22,13 +27,22 @@
 		@include inuit-font-size(30px);
 		color: inherit;
 		font-weight: 100;
-	}
+
+    @include media-query(palm) {
+      top: 20px;
+      @include inuit-font-size(14px);
+    }
+  }
 
 
 
 	//Variations
 	.full-width & {
 		padding: 80px 0 80px 60px;
+
+    @include media-query(palm) {
+      padding: 40px 0 40px 30px;
+    }
 
 		&:before {
 			left: 20px;

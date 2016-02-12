@@ -16,6 +16,10 @@ $border-rad: 5px;
 	margin: auto;
 
 	position: relative;
+
+  @include media-query(palm) {
+    width: 100%;
+  }
 }
 
 .chart__legends {
@@ -26,6 +30,10 @@ $border-rad: 5px;
 	top: 0;
 	left: 0;
 	right: 0;
+
+  @include media-query(palm) {
+    height: auto;
+  }
 }
 
 .chart__legend {
@@ -43,53 +51,26 @@ $border-rad: 5px;
 	text-align: center;
 	font-weight: 500;
 
+  @include media-query(palm) {
+    top: 0;
+    bottom: auto;
+    font-size: 13px;
+  }
+
 	&.l--25   { left: 0; }
 	&.l--50   { left: 25%; }
 	&.l--75   { left: 50%; }
 	&.l--100  { left: 75%; }
 }
 
-.lines {
-	height: 100%;
-	margin: auto;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-
-.line {
-	width: 2px;
-	height: inherit;
-
-	position: absolute;
-
-	background: rgba(#eee, 0.6);
-
-	&.l--25   { left: 25%; }
-	&.l--50   { left: 50%; }
-	&.l--75   { left: 75%; }
-	&.l--100  { left: calc(100% - 1px); }
-}
-
-.line__label {
-	display: block;
-	width: 100px;
-
-	position: absolute;
-	bottom: -20px;
-	right: -50px;
-	z-index: 20;
-
-	text-align: center;
-	color: white;
-}
-
 .charts {
 	margin: auto;
 	padding-bottom: 40px;
 	position: relative;
+
+  @include media-query(palm) {
+    padding-top: 30px;
+  }
 }
 
 .chart {
@@ -132,11 +113,34 @@ $border-rad: 5px;
 	height: 30px;
 	margin-top: 10px;
 
+  position: relative;
+
 	background: white;
 	border-top-right-radius: $border-rad;
 	border-bottom-right-radius: $border-rad;
 
 	opacity: 0;
+
+  @include media-query(palm) {
+    height: 25px;
+    margin-top: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  //&:before {
+  //  content: '';
+  //  width: 140px;
+  //  height: 100%;
+  //
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  z-index: -1;
+  //
+  //  background: white;
+  //  border: 0;
+  //}
 
 	&:first-child {
 		margin-top: 0;
@@ -159,9 +163,19 @@ $border-rad: 5px;
 }
 
 .chart__label {
-	padding-left: 10px;
+  margin-left: 10px;
+  padding: 0px 4px;
+
+  background: rgba(255, 255, 255, .8);
+
 	line-height: 30px;
 	color: $color-tomato;
+
+  @include media-query(palm) {
+    margin-left: 4px;
+    font-size: 14px;
+    line-height: 25px;
+  }
 }
 
 

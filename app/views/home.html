@@ -44,10 +44,22 @@
         <h1 class="section-title" data-subtitle="What I can">Skills</h1>
         <div class="skills">
             <ul class="chart__legends">
-                <li class="chart__legend l--25">The basics</li>
-                <li class="chart__legend l--50">Advanced</li>
-                <li class="chart__legend l--75">Seasoned</li>
-                <li class="chart__legend l--100">Expert</li>
+                <li class="chart__legend l--25">
+                  <span class="hide-lap-and-up">25%</span>
+                  <span class="hide-palm">The basics</span>
+                </li>
+                <li class="chart__legend l--50">
+                  <span class="hide-lap-and-up">50%</span>
+                  <span class="hide-palm">Advanced</span>
+                </li>
+                <li class="chart__legend l--75">
+                  <span class="hide-lap-and-up">75%</span>
+                  <span class="hide-palm">Seasoned</span>
+                </li>
+                <li class="chart__legend l--100">
+                  <span class="hide-lap-and-up">100%</span>
+                  <span class="hide-palm">Expert</span>
+                </li>
             </ul>
 
             <div class="charts">
@@ -56,7 +68,7 @@
                     <ul class="chart--horiz">
                         <li class="chart__bar"
                             ng-repeat="skill in skills.dev"
-                            ng-style="{'width': skill.level + '%'}"><span class="chart__label">{{skill.name}}</span></li>
+                            ng-style="{width: skill.level + '%', 'background': 'rgba(255, 255, 255, 0.' + skill.level}"><span class="chart__label">{{skill.name}}</span></li>
                     </ul>
                 </div>
 
@@ -65,7 +77,7 @@
                     <ul class="chart--horiz">
                         <li class="chart__bar"
                             ng-repeat="skill in skills.prod"
-                            ng-style="{'width': skill.level + '%'}"><span class="chart__label">{{skill.name}}</span></li>
+                            ng-style="{width: skill.level + '%', 'background': 'rgba(255, 255, 255, 0.' + skill.level}"><span class="chart__label">{{skill.name}}</span></li>
                     </ul>
                 </div>
 
@@ -74,7 +86,7 @@
                     <ul class="chart--horiz">
                         <li class="chart__bar"
                             ng-repeat="skill in skills.design"
-                            ng-style="{'width': skill.level + '%'}"><span class="chart__label">{{skill.name}}</span></li>
+                            ng-style="{width: skill.level + '%', 'background': 'rgba(255, 255, 255, 0.' + skill.level}"><span class="chart__label">{{skill.name}}</span></li>
                     </ul>
                 </div>
             </div>

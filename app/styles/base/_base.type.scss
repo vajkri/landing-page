@@ -24,6 +24,10 @@
 .text--huge {
 	font-size: 120px;
 	line-height: 1;
+
+  @include media-query(palm) {
+    font-size: 50px;
+  }
 }
 
 

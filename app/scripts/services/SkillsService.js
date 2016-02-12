@@ -51,10 +51,10 @@ app.factory('SkillsService', function(){
           'name': 'Git',
           'level': '73'
         },
-        {
+        /*{
           'name': 'Github, Bitbucket & Sourcetree',
           'level': '73'
-        },
+        },*/
         {
           'name': 'Microsoft Office',
           'level': '82'
