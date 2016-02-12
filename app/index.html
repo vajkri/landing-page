@@ -40,14 +40,16 @@
     <!--<span class="line line-3"></span>-->
   <!--</a>-->
 
-  <ul class="nav-block">
-    <li class="brand">
-        <span class="brand__name">Krisztina Vajda</span>
-    </li>
-    <li><a class="active" href="#navIntro" du-smooth-scroll duration="1000">Intro</a></li>
-    <li><a href="#navSkills" du-smooth-scroll duration="1000">Skills</a></li>
-    <li><a href="#navInterests" du-smooth-scroll duration="1000">Interests</a></li>
-    <li><a href="#navFooter" du-smooth-scroll duration="1000">Contact</a></li>
+  <span class="brand"
+        ng-mouseenter="navActive = true"
+        ng-mouseleave="navActive = false">Krisztina Vajda</span>
+  <ul class="nav-block" ng-class="{active: navActive}"
+      ng-mouseenter="navActive = true"
+      ng-mouseleave="navActive = false">
+    <li class="nav-block__item"><a class="active" href="#navIntro" du-smooth-scroll duration="1000">Intro</a></li>
+    <li class="nav-block__item"><a href="#navSkills" du-smooth-scroll duration="1000">Skills</a></li>
+    <li class="nav-block__item"><a href="#navInterests" du-smooth-scroll duration="1000">Interests</a></li>
+    <li class="nav-block__item"><a href="#navFooter" du-smooth-scroll duration="1000">Contact</a></li>
   </ul>
 
   <!--Main content gets loaded in through ui-view-->

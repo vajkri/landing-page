@@ -71,7 +71,8 @@
 
 	@include position(absolute, null 0 $inuit-base-spacing-unit);
 
-	font-size: 16px;
+	@include inuit-font-size(16px);
+	font-weight: 400;
 	color: white;
 
 	opacity: 0;
