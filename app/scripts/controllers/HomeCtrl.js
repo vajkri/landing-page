@@ -155,10 +155,29 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
 
 
 
+  var tweenBgWork = new TimelineMax();
+  tweenBgWork.add([
+    TweenMax.to("main", 0.5, {
+      backgroundColor: "#ff7961"
+    })
+  ]);
+
+  var sceneBgWork = new ScrollMagic.Scene({
+    //duration: 500,
+    //triggerHook: 'onEnter',
+    triggerElement: ".section--work"
+  })
+  //.addIndicators({ name: "4 (duration: 300)" }) // add indicators (requires plugin)
+    .setTween(tweenBgWork);
+
+
+
+
+
   var tweenBgSkills = new TimelineMax();
   tweenBgSkills.add([
     TweenMax.to("main", 0.5, {
-      backgroundColor: "#ff7961"
+      backgroundColor: "#f65356"
     })
   ]);
 
@@ -260,6 +279,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     sceneHi,
     sceneName,
     sceneSpiltFrontend,
+    sceneBgWork,
     sceneBgSkills,
     sceneBgInterests,
     sceneBgFooter,

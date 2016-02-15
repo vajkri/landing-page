@@ -25,6 +25,9 @@
   @include media-query(retina) {
     @include inuit-font-size(120px);
   }
+	@include media-query(huge) {
+		@include inuit-font-size(120px);
+	}
   @include media-query(palm) {
     @include inuit-font-size(50px);
   }
