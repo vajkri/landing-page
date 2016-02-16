@@ -97,12 +97,12 @@ $border-rad: 5px;
 		animation: 1s anim-lightspeed-in ease forwards;
 	}
 
-	.chart--prod & {
-		animation-delay: 3s;
-	}
-	.chart--design & {
-		animation-delay: 4.2s;
-	}
+	//.chart--prod & {
+	//	animation-delay: 3s;
+	//}
+	//.chart--design & {
+	//	animation-delay: 4.2s;
+	//}
 }
 
 .chart--horiz {
@@ -152,13 +152,13 @@ $border-rad: 5px;
 	}
 
 	.chart--dev & {
-		@include stagger-delay(9, .5s, 0.2s);
+		@include stagger-delay(9, .5s, 0.15s);
 	}
 	.chart--prod & {
-		@include stagger-delay(3, 3.5s, 0.2s);
+		@include stagger-delay(2, .5s, 0.15s);
 	}
 	.chart--design & {
-		@include stagger-delay(3, 4.7s, 0.2s);
+		@include stagger-delay(3, .5s, 0.15s);
 	}
 }
 

@@ -4,9 +4,10 @@
 
 'use strict';
 
-app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsService) {
+app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsService, WorkService) {
 
   // Data
+  $scope.work= WorkService.work;
   $scope.facts = AboutService.facts;
   $scope.skills = SkillsService.skills[0];
 
