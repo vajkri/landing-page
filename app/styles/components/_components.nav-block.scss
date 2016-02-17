@@ -22,6 +22,11 @@ $spacing: $inuit-base-spacing-unit;
 
 	opacity: 1;
 	cursor: pointer;
+
+  .no-touch &,
+  .touch {
+    display: none;
+  }
 }
 
 .nav-block {
@@ -31,8 +36,11 @@ $spacing: $inuit-base-spacing-unit;
 	z-index: 90;
 
 	a {
+    display: inline-block;
 		color: white;
 		text-decoration: none;
+    padding: 0px 4px;
+    background: rgba($color-gray-ui, 0.3);
 	}
 }
 .nav-block__item {
@@ -51,7 +59,7 @@ $spacing: $inuit-base-spacing-unit;
 		transform: translate3d(0, 0, 0);
 	}
 
-	&:hover {
+	.no-touch &:hover {
 		transform: translate3d(5px, 0, 0);
 		transition-delay: 0s;
 	}
