@@ -78,6 +78,10 @@ $border-rad: 5px;
 
 	&:first-child {
 		margin: 0;
+
+    @include media-query(palm) {
+      margin-top: 10px;
+    }
 	}
 }
 
@@ -90,6 +94,10 @@ $border-rad: 5px;
 	color: white;
 
 	opacity: 0;
+
+  @include media-query(palm) {
+    @include inuit-font-size($inuit-base-font-size);
+  }
 
 	//Animation and timing
 
@@ -155,7 +163,7 @@ $border-rad: 5px;
   background: rgba(255, 255, 255, .8);
 
 	line-height: 30px;
-	color: $color-tomato;
+	color: $color-midway;
 
   @include media-query(palm) {
     margin-left: 4px;

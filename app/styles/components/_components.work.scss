@@ -51,7 +51,8 @@
 			margin-top: 0;
 		}
 
-		&:nth-child(3n+2) {
+    &:nth-child(even),
+    &:nth-child(3n+2) {
 			margin-top: 20px;
 			margin-bottom: 0;
 		}

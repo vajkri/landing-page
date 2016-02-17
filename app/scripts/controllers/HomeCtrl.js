@@ -58,17 +58,13 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
       ease: Back.ease,
       delay: 1
     })
-    //TweenMax.to(".intro", 0.5, {
-    //  backgroundColor: 'red'
-    //})
   ]);
 
   var sceneHi = new ScrollMagic.Scene({
-    duration: 500, // the scene should last for a scroll distance of 100px
-    offset: 0 // start this scene after scrolling for 50px
+    duration: 500
   })
-    .setTween(tweenHi) // trigger a TweenMax.to tween
-    //.addIndicators({ name: "1 (duration: 500)" }) // add indicators (requires plugin)
+    .setTween(tweenHi)
+    //.addIndicators({ name: "Hi (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-hi"); // pins the element for the the scene's duration
 
 
@@ -100,7 +96,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     duration: 500
   })
     .setTween(tweenName)
-    //.addIndicators({ name: "2 (duration: 500)" }) // add indicators (requires plugin)
+    //.addIndicators({ name: "Name (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-intro");
 
 
@@ -149,7 +145,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     //duration: '50%'
   })
     .setTween(tweenSplitFrontend)
-    //.addIndicators({ name: "Frontend (duration: 500)" })
+    //.addIndicators({ name: "Frontend (duration: 150%)" })
     .setPin(".scroll-deck3");
 
 
