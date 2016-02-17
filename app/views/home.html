@@ -1,4 +1,5 @@
 <div ng-show="contentLoaded">
+    <h1 class="hide">Krisztina Vajda, front-end developer.</h1>
     <div class="info-scroll" id="anim--info-scroll">
         <svg class="info-scroll__mouse" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 25.166666 37.8704414" enable-background="new 0 0 25.166666 37.8704414" xml:space="preserve">
         <path class="stroke" fill="none" stroke="#c7c4b8" stroke-width="2.5" stroke-miterlimit="10" d="M12.5833445 36.6204414h-0.0000229C6.3499947 36.6204414 1.25 31.5204487 1.25 25.2871208V12.5833216C1.25 6.3499947 6.3499951 1.25 12.5833216 1.25h0.0000229c6.2333269 0 11.3333216 5.0999947 11.3333216 11.3333216v12.7037992C23.916666 31.5204487 18.8166714 36.6204414 12.5833445 36.6204414z"></path>
@@ -12,36 +13,58 @@
     <section class="section intro full-width" id="navIntro">
         <div class="bg-gradient">
             <div class="scroll-deck scroll-deck1">
-                <h1 class="intro__pinned-h1 pin--h1-hi text--huge centered">
+                <h2 class="intro__pinned-h1 pin--h1-hi text--huge centered">
                     <span id="anim--h1-hi">Hi.</span>
-                </h1>
+                </h2>
             </div>
             <div class="scroll-deck scroll-deck2">
-                <h1 class="intro__pinned-h1 pin--h1-intro text--huge centered">
+                <h2 class="intro__pinned-h1 pin--h1-intro text--huge centered">
                     <span id="anim--h1-intro">My <br>name is <br>Krisztina.</span>
-                </h1>
+                </h2>
             </div>
         </div>
 
         <div class="section-transition">
             <div class="scroll-deck scroll-deck3 js-split">
                 <div class="bg before">
-                    <h1 class="split-text text--huge">I'm a front-end developer.</h1>
+                    <h2 class="split-text text--huge">I'm a front-end developer.</h2>
                 </div>
                 <div class="bg after">
-                    <h1 class="split-text text--huge">I'm a front-end developer.</h1>
+                    <h2 class="split-text text--huge">I'm a front-end developer.</h2>
                 </div>
             </div>
             <div class="scroll-deck scroll-deck4">
-                <h1 class="text--huge text--dark centered">Welcome<br />to<br />my<br />page.</h1>
+                <h2 class="text--huge text--dark centered">Welcome<br />to<br />my<br />page.</h2>
             </div>
         </div>
     </section>
 
 
+    <!-- work -->
+    <div class="section section--work" id="navWork">
+        <h2 class="section-title" data-subtitle="What I made">Work</h2>
+        <div class="work">
+            <a href="{{w.url}}" target="_blank" class="work-block" ng-repeat="w in work">
+                <figure class="work-block__figure">
+                    <div class="work-block__img" style="background-image: url('{{w.img}}');"></div>
+                    <svg class="work-block__shape" viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                    <figcaption>
+                        <h4 class="work-block__title" ng-class="{'long-text': w.title.length > 18}">{{w.title}}</h4>
+                        <p class="work-block__desc" >{{w.desc}}</p>
+                        <button class="work-block__c2a" >View site</button>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="work-block bonus hide-desk hide-palm">
+                <h4 class="work-block__title centered">And more...</h4>
+            </div>
+        </div>
+    </div>
+
+
     <!-- skills -->
     <section class="section section--skills" id="navSkills">
-        <h1 class="section-title" data-subtitle="What I can">Skills</h1>
+        <h2 class="section-title" data-subtitle="What I can">Skills</h2>
         <div class="skills">
             <ul class="chart__legends">
                 <li class="chart__legend l--25">
@@ -96,13 +119,13 @@
 
     <!-- interest -->
     <section class="section--interests about full-width" id="navInterests">
-        <h1 class="section-title" data-subtitle="What I like">Interests</h1>
+        <h2 class="section-title" data-subtitle="What I like">Interests</h2>
         <div class="cards">
             <div class="card"
                  ng-repeat="fact in facts"
                  style="background-image: url('{{fact.img}}');">
 
-                <h2 class="card__title">{{fact.title}}</h2>
+                <h4 class="card__title">{{fact.title}}</h4>
                 <p class="card__body">{{fact.desc}}</p>
 
             </div>
@@ -112,9 +135,9 @@
 
     <!-- footer -->
     <footer class="section section--footer" id="navFooter">
-        <h1 class="section-title text--dark" data-subtitle="Get in touch">
+        <h2 class="section-title text--dark" data-subtitle="Get in touch">
             Contact
-        </h1>
+        </h2>
         <section class="social-icons">
             <!--profile-->
             <div class="social-icon profile hide-lap-and-up">

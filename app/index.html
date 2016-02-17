@@ -47,6 +47,7 @@
       ng-mouseenter="navActive = true"
       ng-mouseleave="navActive = false">
     <li class="nav-block__item"><a class="active" href="#navIntro" du-smooth-scroll duration="1000">Intro</a></li>
+    <li class="nav-block__item"><a href="#navWork" du-smooth-scroll duration="1000">Work</a></li>
     <li class="nav-block__item"><a href="#navSkills" du-smooth-scroll duration="1000">Skills</a></li>
     <li class="nav-block__item"><a href="#navInterests" du-smooth-scroll duration="1000">Interests</a></li>
     <li class="nav-block__item"><a href="#navFooter" du-smooth-scroll duration="1000">Contact</a></li>
@@ -58,6 +59,7 @@
 
 
 
+    <script src="scripts/vendors/modernizr.min.js"></script>
     <script src="scripts/vendors/angular.min.js"></script>
     <script src="scripts/vendors/angular-scroll.min.js"></script>
     <script src="scripts/vendors/angular-animate.min.js"></script>
@@ -78,6 +80,7 @@
     <script src="scripts/app.js"></script>
 
     <!-- Srevices -->
+    <script src="scripts/services/WorkService.js"></script>
     <script src="scripts/services/AboutService.js"></script>
     <script src="scripts/services/SkillsService.js"></script>
 
