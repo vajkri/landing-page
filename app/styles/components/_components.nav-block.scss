@@ -44,7 +44,7 @@ $spacing: $inuit-base-spacing-unit;
 	opacity: 0;
 	transform: translate3d(-10px, 0, 0);
 	transition: 350ms ease;
-	@include stagger-delay(4, 0s, 0.07s, transition);
+	@include stagger-delay(5, 0s, 0.07s, transition);
 
 	.active & {
 		opacity: 1;
