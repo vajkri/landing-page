@@ -12,7 +12,7 @@ app.factory('WorkService', function(){
     {
       'title': 'Roskilde Festival',
       'desc': 'Implemented new features, such as Concert Archive, involved in numerous site-wide improvements.',
-      'img': 'images/work/rf2.jpg',
+      'img': 'images/work/rf.jpg',
       'url': 'http://www.roskilde-festival.dk/'
     },
     {

@@ -49,12 +49,15 @@
                     <div class="work-block__img" style="background-image: url('{{w.img}}');"></div>
                     <svg class="work-block__shape" viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
                     <figcaption>
-                        <h4 ng-class="{'long-text': w.title.length > 18}">{{w.title}}</h4>
-                        <p>{{w.desc}}</p>
-                        <button>View site</button>
+                        <h4 class="work-block__title" ng-class="{'long-text': w.title.length > 18}">{{w.title}}</h4>
+                        <p class="work-block__desc" >{{w.desc}}</p>
+                        <button class="work-block__c2a" >View site</button>
                     </figcaption>
                 </figure>
             </a>
+            <div class="work-block bonus hide-desk hide-palm">
+                <h4 class="work-block__title centered">And more...</h4>
+            </div>
         </div>
     </div>
 
