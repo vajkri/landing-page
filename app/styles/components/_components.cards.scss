@@ -33,7 +33,7 @@
 		max-width: 100%;
 	}
 
-	&:hover {
+	.no-touch &:hover {
 		&:before {
 			background: linear-gradient(to top, $gradient-crimson, $gradient-tomato);
 			opacity: .5;
@@ -76,4 +76,18 @@
 	opacity: 0;
 	transform: translate3d(0, -50px, 0);
 	transition: opacity 350ms, transform 350ms;
+}
+
+//Optimized for touch devices
+.touch {
+	.card {
+		&:before {
+			background: linear-gradient(to top, rgba(37,141,200,1), rgba(104,60,19,1));
+			opacity: .3;
+		}
+		.card__body {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
 }
