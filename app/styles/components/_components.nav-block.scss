@@ -6,29 +6,6 @@
 
 $spacing: $inuit-base-spacing-unit;
 
-.brand {
-	margin-top: 0;
-
-	position: fixed;
-	top: $spacing;
-	left: $spacing;
-	z-index: 90;
-
-	@include inuit-font-size(18px);
-	font-weight: 700;
-	letter-spacing: 0.05rem;
-	text-transform: uppercase;
-	color: white;
-
-	opacity: 1;
-	cursor: pointer;
-
-  .no-touch &,
-  .touch {
-    display: none;
-  }
-}
-
 .nav-block {
 	position: fixed;
 	top: 50px;
@@ -41,10 +18,11 @@ $spacing: $inuit-base-spacing-unit;
 		text-decoration: none;
     padding: 0px 4px;
     background: rgba($color-gray-ui, 0.3);
+		transition: 350ms ease;
 	}
 }
 .nav-block__item {
-	margin-top: $inuit-base-spacing-unit;
+	margin-top: $spacing;
 
 	list-style-type: none;
 	font-weight: 400;
@@ -67,5 +45,9 @@ $spacing: $inuit-base-spacing-unit;
 	.no-touch &:hover {
 		transform: translate3d(5px, 0, 0);
 		transition-delay: 0s;
+
+		a {
+			background: rgba($color-gray, 0.5);
+		}
 	}
 }

@@ -5,6 +5,7 @@
 \*------------------------------------*/
 
 $color: white;
+$color-hover: $color-gray;
 
 $height-icon: 26px;
 $width-line: 40px;
@@ -15,15 +16,16 @@ $rotation: 45deg;
 $translateY: ($height-icon / 2);
 $translateX: 0;
 
+$spacing: $inuit-base-spacing-unit;
 
-#hamburger-icon {
+.hamburger-icon {
 	display:block;
 	width:$width-line;
 	height:$height-icon;
 
 	position: fixed;
-	top: $inuit-base-spacing-unit;
-	left: $inuit-base-spacing-unit;
+	top: $spacing;
+	left: $spacing;
 	z-index: 20;
 
 	transition: all $transition-time;
@@ -47,6 +49,11 @@ $translateX: 0;
 		&.line-3 {
 			transform-origin: center center;
 			top:100%;
+		}
+	}
+	.no-touch &:hover {
+		.line {
+			background: $color-hover;
 		}
 	}
 	&:hover, &:focus {
