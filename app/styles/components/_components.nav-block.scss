@@ -31,7 +31,7 @@ $spacing: $inuit-base-spacing-unit;
 
 .nav-block {
 	position: fixed;
-	top: $spacing*2;
+	top: 50px;
 	left: $spacing;
 	z-index: 90;
 
@@ -50,12 +50,17 @@ $spacing: $inuit-base-spacing-unit;
 	font-weight: 400;
 
 	opacity: 0;
+	visibility: hidden;
+	user-select: none;
+
 	transform: translate3d(-10px, 0, 0);
 	transition: 350ms ease;
 	@include stagger-delay(5, 0s, 0.07s, transition);
 
 	.active & {
 		opacity: 1;
+		visibility: visible;
+		user-select: initial;
 		transform: translate3d(0, 0, 0);
 	}
 

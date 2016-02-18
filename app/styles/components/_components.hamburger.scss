@@ -26,6 +26,8 @@ $translateX: 0;
 	left: $inuit-base-spacing-unit;
 	z-index: 20;
 
+	transition: all $transition-time;
+
 	.line {
 		display:block;
 		background:$color;
@@ -56,6 +58,7 @@ $translateX: 0;
 		}
 	}
 	&.active {
+		left: 15px;
 		.line-1 {
 			transform: translateY($translateY) translateX($translateX) rotate($rotation);
 		}
