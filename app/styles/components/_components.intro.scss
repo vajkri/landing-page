@@ -28,19 +28,30 @@
 }
 
 #anim--h1-hi {
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
-	animation: arrive-hi 1s 1s ease backwards;
+	//opacity: 1;
+	//transform: translate3d(0, 0, 0);
+	//animation: arrive-hi 1s 1s ease backwards;
+
+
+  //left: 0;
+  opacity: 0;
+  transform: translate3d(-20px, 0, 0);
+  transition: 500ms ease all 1500ms;
+
+  .isLoaded &{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-@keyframes arrive-hi {
-	from {
-		left: 0;
-		opacity: 0;
-		transform: translate3d(-20px, 0, 0);
-	}
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
-}
+//@keyframes arrive-hi {
+//	from {
+//		left: 0;
+//		opacity: 0;
+//		transform: translate3d(-20px, 0, 0);
+//	}
+//	to {
+//		opacity: 1;
+//		transform: translate3d(0, 0, 0);
+//	}
+//}

@@ -55,8 +55,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     TweenMax.to("#anim--h1-hi", 0.5, {
       opacity: 0,
       x: 20,
-      ease: Back.ease,
-      delay: 1
+      ease: Back.ease
     })
   ]);
 
@@ -64,7 +63,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     duration: '100%'
   })
     .setTween(tweenHi)
-    //.addIndicators({ name: "Hi (duration: 500)" }) // add indicators (requires plugin)
+    .addIndicators({ name: "Hi (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-hi"); // pins the element for the the scene's duration
 
 
