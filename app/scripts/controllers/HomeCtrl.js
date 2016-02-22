@@ -50,21 +50,21 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
 
 
 
-  var tweenHi = new TimelineMax();
-  tweenHi.add([
-    TweenMax.to("#anim--h1-hi", 0.5, {
-      opacity: 0,
-      x: 20,
-      ease: Back.ease
-    })
-  ]);
-
-  var sceneHi = new ScrollMagic.Scene({
-    duration: '100%'
-  })
-    .setTween(tweenHi)
-    .addIndicators({ name: "Hi (duration: 500)" }) // add indicators (requires plugin)
-    .setPin(".pin--h1-hi"); // pins the element for the the scene's duration
+  //var tweenHi = new TimelineMax();
+  //tweenHi.add([
+  //  TweenMax.to(".anim--header-hi", 0.5, {
+  //    opacity: 0,
+  //    x: 20,
+  //    ease: Back.ease
+  //  })
+  //]);
+  //
+  //var sceneHi = new ScrollMagic.Scene({
+  //  duration: '100%'
+  //})
+  //  .setTween(tweenHi)
+  //  .addIndicators({ name: "Hi (duration: 500)" }) // add indicators (requires plugin)
+  //  .setPin(".anim--header-hi"); // pins the element for the the scene's duration
 
 
 
@@ -72,17 +72,17 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
 
   var tweenName = new TimelineMax();
   tweenName.add([
-    TweenMax.from("#anim--h1-intro", 0.5, {
+    TweenMax.from(".anim--header-intro", 0.5, {
       opacity: 0,
       x: -30,
       ease: Back.ease
     }),
-    TweenMax.to("#anim--h1-intro", 0.5, {
+    TweenMax.to(".anim--header-intro", 0.5, {
       opacity: 1,
       x: 0,
       ease: Back.ease
     }),
-    TweenMax.to("#anim--h1-intro", 0.5, {
+    TweenMax.to(".anim--header-intro", 0.5, {
       opacity: 0,
       x: 30,
       ease: Back.ease,
@@ -91,12 +91,12 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
   ]);
 
   var sceneName = new ScrollMagic.Scene({
-    triggerElement: ".pin--h1-intro",
+    triggerElement: ".anim--header-intro",
     duration: '120%'
   })
     .setTween(tweenName)
-    //.addIndicators({ name: "Name (duration: 500)" }) // add indicators (requires plugin)
-    .setPin(".pin--h1-intro");
+    .addIndicators({ name: "Name (duration: 500)" }) // add indicators (requires plugin)
+    .setPin(".anim--header-intro");
 
 
 
@@ -271,7 +271,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
 //Add scenes to controller
   homeScrollController.addScene([
     sceneMouse,
-    sceneHi,
+    //sceneHi,
     sceneName,
     sceneSpiltFrontend,
     sceneBgWork,

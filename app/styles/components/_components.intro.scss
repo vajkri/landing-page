@@ -4,13 +4,28 @@
     Created by krisztinavajda on 14/01/16.
 \*------------------------------------*/
 
-.section--intro {
-	height: 100%;
-	min-height: 300vh;
-	margin: auto;
+//.section--intro {
+//	height: 100%;
+//	min-height: 300vh;
+//	margin: auto;
+//}
+
+.scroll-deck {
+  &.scroll-deck1,
+  &.scroll-deck2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; // set width to auto center
+    height: 100vh;
+    padding: 0;
+
+    //position: fixed; // set position to fixed to prevent jump
+  }
+
 }
 
-.intro__pinned-h1 {
+.intro__pinned-header {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -27,31 +42,19 @@
 	}
 }
 
-#anim--h1-hi {
-	//opacity: 1;
-	//transform: translate3d(0, 0, 0);
-	//animation: arrive-hi 1s 1s ease backwards;
-
-
-  //left: 0;
-  opacity: 0;
-  transform: translate3d(-20px, 0, 0);
-  transition: 500ms ease all 1500ms;
-
-  .isLoaded &{
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+.anim--header-hi {
+  //opacity: 0;
+  animation: arrive-hi 0.5s ease 1s backwards;
 }
 
-//@keyframes arrive-hi {
-//	from {
-//		left: 0;
-//		opacity: 0;
-//		transform: translate3d(-20px, 0, 0);
-//	}
-//	to {
-//		opacity: 1;
-//		transform: translate3d(0, 0, 0);
-//	}
-//}
+@keyframes arrive-hi {
+	from {
+		left: 0;
+		opacity: 0;
+		transform: translate3d(-20px, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
