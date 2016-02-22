@@ -63,7 +63,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     duration: '100%'
   })
     .setTween(tweenHi)
-    .addIndicators({ name: "Hi (duration: 500)" }) // add indicators (requires plugin)
+    //.addIndicators({ name: "Hi (duration: 500)" }) // add indicators (requires plugin)
     .setPin(".pin--h1-hi"); // pins the element for the the scene's duration
 
 
