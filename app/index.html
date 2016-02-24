@@ -44,11 +44,9 @@
     <span class="line line-3"></span>
   </a>
   <ul class="nav-block" ng-class="{active: navActive}">
-    <li class="nav-block__item"><a href="#navIntro" du-smooth-scroll duration="1000">Intro</a></li>
-    <li class="nav-block__item"><a href="#navWork" du-smooth-scroll duration="1000">Work</a></li>
-    <li class="nav-block__item"><a href="#navSkills" du-smooth-scroll duration="1000">Skills</a></li>
-    <li class="nav-block__item"><a href="#navInterests" du-smooth-scroll duration="1000">Interests</a></li>
-    <li class="nav-block__item"><a href="#navFooter" du-smooth-scroll duration="1000">Contact</a></li>
+    <li class="nav-block__item"
+        ng-repeat="n in nav"
+        ng-click="navActive = !navActive"><a href="#" du-smooth-scroll duration="1000"></a></li>
   </ul>
 
 
