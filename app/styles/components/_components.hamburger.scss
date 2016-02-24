@@ -19,9 +19,9 @@ $translateX: 0;
 $spacing: $inuit-base-spacing-unit;
 
 .hamburger-icon {
-	display:block;
-	width:$width-line;
-	height:$height-icon;
+	display: block;
+	width: $width-line;
+	height: $height-icon;
 
 	position: fixed;
 	top: $spacing;
@@ -31,24 +31,28 @@ $spacing: $inuit-base-spacing-unit;
 	transition: all $transition-time;
 
 	.line {
-		display:block;
-		background:$color;
-		width:$width-line;
-		height:$height-line;
-		position:absolute;
-		left:0;
+		display: block;
+		width: $width-line;
+		height: $height-line;
+
+		position: absolute;
+		left: 0;
+
+		background: $color;
+		box-shadow: 0 0 5px 2px rgba(darken($color-brand, 8%), 0.25);
+
 		transition: all $transition-time;
 
 		&.line-1 {
-			top:0;
+			top: 0;
 			transform-origin: center center;
 		}
 		&.line-2 {
-			top:50%;
+			top: 50%;
 		}
 		&.line-3 {
 			transform-origin: center center;
-			top:100%;
+			top: 100%;
 		}
 	}
 	.no-touch &:hover {
@@ -70,7 +74,7 @@ $spacing: $inuit-base-spacing-unit;
 			transform: translateY($translateY) translateX($translateX) rotate($rotation);
 		}
 		.line-2 {
-			opacity:0;
+			opacity: 0;
 		}
 		.line-3 {
 			transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
