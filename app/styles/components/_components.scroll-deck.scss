@@ -15,7 +15,11 @@
 }
 
 .scroll-deck2 {
-	min-height: calc(90vh + 500px);
+	min-height: 200vh;
+}
+.scroll-deck2__spacer {
+  height: 30vh;
+  position: relative;
 }
 
 //Scroll-deck3 - Split text effect
@@ -86,6 +90,6 @@ $transition-ease: ease;
 
 
 .scroll-deck4 {
-	padding-top: 120vh;
-	top: 60vh;
+	padding-top: 160vh;
+	top: 70vh;
 }

@@ -27,10 +27,19 @@
 	}
 }
 
+.pin--h1-hi {
+  position: fixed !important; //fixes jumping issue in Safari
+}
+
 #anim--h1-hi {
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
-	animation: arrive-hi 1s 1s ease backwards;
+  opacity: 1;
+  animation: arrive-hi 1s 1s ease backwards;
+
+  //Todo: add inview & isloaded check
+  //.isLoaded &{
+  //  opacity: 1;
+  //  transform: translate3d(0, 0, 0);
+  //}
 }
 
 @keyframes arrive-hi {

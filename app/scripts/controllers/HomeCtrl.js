@@ -55,13 +55,12 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     TweenMax.to("#anim--h1-hi", 0.5, {
       opacity: 0,
       x: 20,
-      ease: Back.ease,
-      delay: 1
+      ease: Back.ease
     })
   ]);
 
   var sceneHi = new ScrollMagic.Scene({
-    duration: 500
+    duration: '100%'
   })
     .setTween(tweenHi)
     //.addIndicators({ name: "Hi (duration: 500)" }) // add indicators (requires plugin)
@@ -93,7 +92,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
 
   var sceneName = new ScrollMagic.Scene({
     triggerElement: ".pin--h1-intro",
-    duration: 500
+    duration: '120%'
   })
     .setTween(tweenName)
     //.addIndicators({ name: "Name (duration: 500)" }) // add indicators (requires plugin)
@@ -123,7 +122,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
       {
         xPercent: -100,
         ease: splitTextEase,
-        delay: 0.5
+        delay: 1.5
       }),
     TweenMax.fromTo(".scroll-deck3 .bg.after", 1,
       {
@@ -133,7 +132,7 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
       {
         xPercent: 100,
         ease: splitTextEase,
-        delay: 0.5
+        delay: 1.5
       })
   ]);
 
@@ -142,7 +141,6 @@ app.controller('HomeCtrl', function($scope, $timeout, AboutService, SkillsServic
     triggerElement: ".scroll-deck3",
     triggerHook: 'onLeave',
     duration: '150%'
-    //duration: '50%'
   })
     .setTween(tweenSplitFrontend)
     //.addIndicators({ name: "Frontend (duration: 150%)" })
